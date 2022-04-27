@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 64px;
+
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 1px 2px rgb(24, 90, 90);
+    font-family: 'Lobster', cursive;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: rgb(59, 59, 59);
+}
+
+h3 {
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+h4 {
+    font-size: 20px;
+    color: rgb(87, 87, 87);
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #000000;
+    margin: 15px 0 20px 0;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #24804c;
+}
+
+body {
+    width: 100%;
+
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+button.normal{
+    /*boton del banner de descuento*/
+font-size: 14px;
+font-weight: 600;
+padding: 10px 30px;
+background-color: rgba(255, 255, 255, 0.64);
+color: #535353;
+border-radius: 5px;
+cursor: pointer;
+border: none;
+outline: none;
+transition: 0.3s ease-out;
+}
+
+button.white{
+    /*boton del banner de ofertones*/
+font-size: 13px;
+font-weight: 600;
+padding: 11px 18px;
+background-color: transparent;
+color: #04622d;
+cursor: pointer;
+border: 1px solid #04622d;
+outline: none;
+transition: 0.2s;
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #04622d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#hero h2 {
+    color: white;
+    text-shadow: 2px 1px 2px rgb(24, 90, 90);
+
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 1px 2px rgb(41, 52, 52);
+}
+
+#header img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(233, 233, 233);
+    transition: 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+#navbar li a:hover,
+#navbar li a:active {
+    /*el active lo que hace es mantener el hover mientras está seleccionado esa sección*/
+    color: #87c072;
+}
+
+#navbar li a:active::after,
+#navbar li a:hover::after {
+    /*la linea debajo de lo seleccionado*/
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #87c072;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+
+/*section hero*/
+#hero {
+    background-image: url('/images/fondo.jpg');
+    height: 90vh;
+    opacity: 80%;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h1 {
+    color: #84b05d;
+    text-shadow: 2px 2px 1px rgb(175, 223, 178);
+}
+
+#hero button {
+    background-image: url("/images/watercolor-png-29933.png");
+    background-color: transparent;
+    background-size: cover;
+    color: #37561b;
+    text-shadow: 1px 1px 2px rgba(72, 150, 150, 1);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 20%;
+    border: 0;
+    padding: 18px 80px 14px 40px;
+    cursor: pointer;
+
+}
+
+/*section feature*/
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 180px;
+    height: 250px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(43, 122, 57, 0.368);
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: white;
+    background-color: #6c8853;
+}
+
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+    color: #37561b;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+    color: #6493a7;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+    color: #25399e;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+    color: #9c639c;
+
+}
+
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+    color: #f3b373;
+}
+
+#feature .fe-box img {
+
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/*products*/
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro {
+    position: relative;
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease-in;
+}
+
+#product1 .pro:hover {
+    box-shadow: 25px 25px 35px rgba(12, 90, 44, 0.152);
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgb(220, 187, 0);
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #37561b;
+}
+
+#product1 .pro .cart {
+
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #d1e8f2aa;
+    font-weight: 500;
+    color: #24804c;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/*banner*/
+
+#banner {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('/images/banner.jpg');
+    background-blend-mode: darken;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#banner h4 {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(232, 255, 255, 0.514);
+
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+    text-shadow: 1px 2px 2px rgba(54, 54, 54, 0.443);
+}
+#banner h2 span{
+    color: rgb(197, 0, 0);
+}
+#banner button:hover{
+    background: #04622d;
+    color: white;
+}
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*el texto a la izquierda*/
+    align-items: flex-start;
+    background-image: url('/images/banner2.jpg');
+    background-blend-mode: darken;
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+}
+#sm-banner .banner-box2{
+    /*banner de ofertones 25% off */
+    background-image: url('/images/banner2.jpg');
+    
+}
+#sm-banner h4{
+    color: #04622d;
+    font-size: 20px;
+    font-weight: 400;
+}
+#sm-banner h2{
+    color: #04622d;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span{
+    color: #04622d;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button{
+background-color: #04622d;
+color: #fff;
+}
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*el texto a la izquierda*/
+    align-items: flex-start;
+    background-image: url('/images/banner2.jpg');
+    background-blend-mode: darken;
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner3 .banner-box2{
+    background-image: url('/images/banner2.jpg');
+
+}
+#banner3 .banner-box3{
+    background-image: url('/images/banner2.jpg');
+    
+}
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+#banner3 h3{
+    color: #04622d;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#novedades{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #6c8853;
+}
+#novedades h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+#novedades p{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(203, 203, 203);
+}
+#novedades p span{
+    color: rgb(191, 200, 23);
+}
+#novedades .form{
+    display: flex;
+    width: 40%;
+}
+#novedades input{
+    height: 3rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#novedades button{
+    background-color: #04622d;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .logo{
+    margin-bottom: 30px;
+
+}
+.footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+.footer a{
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.footer .follow{
+    margin-top: 20px;
+}
