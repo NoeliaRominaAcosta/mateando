@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 @import './general.css';
+@import './navbar.css';
 @import './index.css';
 @import './productsIndex.css';
+@import './products.css';
 

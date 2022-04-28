@@ -92,81 +92,7 @@ border: 1px solid #04622d;
 outline: none;
 transition: 0.2s;
 }
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 80px;
-    background: #04622d;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    z-index: 10;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
 
-#hero h2 {
-    color: white;
-    text-shadow: 2px 1px 2px rgb(24, 90, 90);
-
-}
-
-#hero h4 {
-    padding-bottom: 15px;
-    color: white;
-    text-shadow: 2px 1px 2px rgb(41, 52, 52);
-}
-
-#header img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#navbar li {
-    padding: 0 20px;
-    position: relative;
-}
-
-#navbar li a {
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(233, 233, 233);
-    transition: 0.5s ease-in-out;
-    text-transform: uppercase;
-}
-
-#navbar li a:hover,
-#navbar li a:active {
-    /*el active lo que hace es mantener el hover mientras está seleccionado esa sección*/
-    color: #87c072;
-}
-
-#navbar li a:active::after,
-#navbar li a:hover::after {
-    /*la linea debajo de lo seleccionado*/
-    content: "";
-    width: 30%;
-    height: 2px;
-    background-color: #87c072;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-
-}
-#mobile{
-    display: none;
-    align-items: center;
-}
-
-#close{
-    display: none;
-}
 /*section hero*/
 #hero {
     background-image: url('/images/fondo.jpg');
@@ -185,6 +111,18 @@ transition: 0.2s;
 #hero h1 {
     color: #84b05d;
     text-shadow: 2px 2px 1px rgb(175, 223, 178);
+}
+
+#hero h2 {
+    color: white;
+    text-shadow: 2px 1px 2px rgb(24, 90, 90);
+
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 1px 2px rgb(41, 52, 52);
 }
 
 #hero button {

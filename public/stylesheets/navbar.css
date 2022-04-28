@@ -1,0 +1,50 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #04622d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(233, 233, 233);
+    transition: 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+#navbar li a:hover{
+    /*el active lo que hace es mantener el hover mientras está seleccionado esa sección*/
+    color: #87c072;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}

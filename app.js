@@ -6,7 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 /* const usersRouter = require('./routes/users'); */
-
+const productsRouter = require('./routes/products');
 
 const app = express();
 
@@ -21,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/products', productsRouter)
 /* app.use('/users', usersRouter);  */
 
 /* app.get('/', (req,res) => res.sendFile(path.resolve(__dirname,'views','index.html'))); */
