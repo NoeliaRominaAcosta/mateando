@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head',{
+        title : 'Mateando'
+    }) %>
+
+<body class="detail">
+    <%- include('./partials/header') %>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="/images/Mate de @la_rosenda.jpg" width="100%" id="mainImg">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="/images/mateflores.jpg" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="/images/Mate calabaza_.jpg" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="/images/Mate de @la_rosenda (2).jpg" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="/images/Mate de @la_rosenda.jpg" width="100%" class="small-img">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+          <div class="detail-data">
+             <h2>Mate floreado</h3>
+                  <h3>$2300</h3>
+                  <p>$2800</p>
+          </div>
+             
+         
+           
+            <div class="selection">
+                <select name="mate" id="mate">
+                    <option value="mate">Selecciona</option>
+                    <option value="mate">Blanco</option>
+                    <option value="mate">Negro</option>
+                    <option value="mate">Natural</option>
+                </select>
+                <input type="number" value="1" id="mate-detail">
+                <button class="normal">Agregar</button>
+            </div>
+            <div class="description">
+                <h4>Detalles</h4>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quos sit consequuntur, maiores perferendis nihil quaerat beatae delectus. Facere ab ad laboriosam fuga
+                ut nobis a eum, libero, in sit dolore.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero neque sunt et, dolore
+                fugiat. Et iusto omnis rerum ipsa perferendis harum! Nostrum facere et cum ab saepe pariatur
+                dolorum!</span>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- esta section es la segunda del  index y deja solo 4 -->
+    <section id="product1" class="section-p1">
+        <h2>Relacionados</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <div class="img14">
+
+
+                </div>
+                <div class="des">
+                    <span>La rosenda</span>
+                    <h5>Mate floreado madera</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <h4>$2.300</h4>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+            </div>
+            <div class="pro">
+                <div class="img7">
+
+
+                </div>
+                <div class="des">
+                    <span>La rosenda</span>
+                    <h5>Mate floreado madera</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <h4>$2.300</h4>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+            </div>
+            <div class="pro">
+                <div class="img8">
+
+
+                </div>
+                <div class="des">
+                    <span>La rosenda</span>
+                    <h5>Mate floreado madera</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <h4>$2.300</h4>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+            </div>
+            <div class="pro">
+                <div class="img9">
+
+
+                </div>
+                <div class="des">
+                    <span>La rosenda</span>
+                    <h5>Mate floreado madera</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <h4>$2.300</h4>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="novedades" class="section-p1 section-m1">
+        <div class="novedadtexto">
+            <h4>Suscribite para novedades y</h4>
+            <p>Obtené <span>cupones</span> especiales de descuento</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Tu email">
+            <button class="normal">Enviame</button>
+        </div>
+    </section>
+
+
+    <%- include('./partials/footer') %>
+    <script src="/javascripts/script.js"></script>
+
+    <!-- esto para las imagenes de carrusel -->
+
+    <script>
+        let mainImg = document.getElementById("mainImg");
+        let smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function () {
+            mainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+            mainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+            mainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+            mainImg.src = smallimg[3].src;
+        }
+    </script>
+</body>
+
+</html>
