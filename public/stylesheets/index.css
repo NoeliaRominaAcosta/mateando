@@ -159,7 +159,14 @@ transition: 0.2s;
     left: 20px;
 
 }
+#mobile{
+    display: none;
+    align-items: center;
+}
 
+#close{
+    display: none;
+}
 /*section hero*/
 #hero {
     background-image: url('/images/fondo.jpg');
@@ -199,7 +206,7 @@ transition: 0.2s;
 #feature {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -211,7 +218,7 @@ transition: 0.2s;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.1);
     border: 1px solid #cce7d0;
     border-radius: 4px;
-    margin: 15px 0;
+    margin: 15px 20px;
     cursor: pointer;
     transition: 0.3s ease-in;
 }
@@ -269,7 +276,7 @@ transition: 0.2s;
 
 #product1 .pro-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 20px;
     flex-wrap: wrap;
 }
@@ -290,10 +297,7 @@ transition: 0.2s;
     box-shadow: 25px 25px 35px rgba(12, 90, 44, 0.152);
 }
 
-#product1 .pro img {
-    width: 100%;
-    border-radius: 20px;
-}
+
 
 #product1 .pro .des {
     text-align: start;
@@ -389,7 +393,7 @@ transition: 0.2s;
     align-items: flex-start;
     background-image: url('/images/banner2.jpg');
     background-blend-mode: darken;
-    min-width: 580px;
+    width: 100%;
     height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -398,7 +402,8 @@ transition: 0.2s;
 }
 #sm-banner .banner-box2{
     /*banner de ofertones 25% off */
-    background-image: url('/images/banner2.jpg');
+    margin: 15px 0;
+    background-image: url('/images/banner3.webp');
     
 }
 #sm-banner h4{
@@ -535,4 +540,156 @@ footer .logo{
 }
 .footer .follow{
     margin-top: 20px;
+}
+.footer .follow i{
+    color: gray;
+    padding-right: 4px;
+    cursor: pointer;
+}
+.footer .follow i:hover,
+.footer a:hover{
+    color: darkolivegreen;
+}
+
+.footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:920px) {
+    /*esto sera un nav bar a la derecha desplegado en vertical*/
+    .section-p1{
+        padding: 40px 40px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        /*esto hace que no esté visible, la tira por fuera*/
+        height: 100vh;
+        width: 300px;
+        background-color: #04622d;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar.active{
+        /*se hace presente*/
+        right: 0px;
+       
+
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+     #mobile i{
+        color: #88cc7f;
+      font-size: 24px;  
+      padding-left: 20px;
+     }
+     #close{
+         display: initial;
+         /*la cruz que cierrra el menu en mobile*/
+         position: absolute;
+         top: 30px;
+         left: 30px;
+         color: #222;
+         font-size: 24px;
+     }
+     #lg-bag{
+         display: none;
+     }
+     #hero {
+        height: 70vh;
+        padding: 0 80px;
+       background-position: top 30% right 30%;
+    }
+    #feature{
+        justify-content: space-evenly;
+    }
+  
+    #feature .fe-box{
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container{
+        justify-content: center;
+    }
+    #product1 .pro{
+        margin: 15px;
+    }
+    #banner {
+       height: 35vh;
+    }
+    #sm-banner{
+        display: initial;
+    }
+    #sm-banner .banner-box{
+        min-width: 100%;
+        height: 30vh;
+        margin: 10px 0;
+    }
+    #banner3{
+        padding: 0 40px;
+    }
+    #banner3 .banner-box{
+        width: 25%;
+    }
+    #novedades .form{
+        width: 70%;
+    }
+} 
+@media (max-width: 460px) {
+    #header{
+        padding: 10px 30px;
+
+    }
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+  
+    #feature .fe-box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h1{
+        font-size: 38px;
+    }
+    #product1 .pro {
+        width: 100%;
+    }
+    #banner{
+        height: 50vh;
+    }
+    #sm-banner .banner-box{
+        height: 40vh;
+    }
+    #sm-banner .banner-box2{
+        margin-top: 20px;
+    }
+    #banner3{
+        padding: 0 20px;
+    }
+    #banner3 .banner-box{
+        width: 100%;
+    }
+    #novedades{
+        padding: 40px 20px;
+    }
+    #novedades .form{
+        width: 100%;
+    }
 }
