@@ -1,5 +1,7 @@
+const fs = require('fs');
+const path = require('path');
 const categories = require('../data/categories');
-const products = require('../data/products');
+const products = require('../data/products.json');
 
 module.exports = {
     products : (req,res) => {
@@ -13,7 +15,36 @@ module.exports = {
         })
       },
 
+      add : (req,res) => {
+        return res.render('productAdd', {
+          categories
+        })
+      },
+      store : (req,res) => {
+        let {name, price, category} = req.body;
+        let lastID = products[products.length -1].id;
+        let newProduct = {
+          id : +lastID + 1,
+          name : name.trim(),
+          price : +price,
+          category : +category
+        }
+        
+        products.push(newProduct)
 
+        fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8')
+        return res.redirect('/')
+      },
+
+      edit : (req,res) => {
+        const {id} =req.params;
+        const product = products.find(product => product.id === +id);
+  
+        return res.render('productEdit', {
+          categories,
+          product
+        })
+      },
     detail : (req,res) => {
       const {idProduct} = req.params 
     /**ese id va a volver a la vista como valor de la propiedad imagen */
@@ -31,7 +62,7 @@ module.exports = {
 
       const {name, products} = categories.find(category => category.id === +idCategory) 
       /**se pone + porque es string */
-      /**name y products de categories */
+      
       return res.render('categories', {
         name,
         products

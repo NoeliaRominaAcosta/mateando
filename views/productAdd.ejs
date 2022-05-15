@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head',{
+        title : 'Nuevo producto'
+    })  %> 
+
+
+<body class="register">
+    <%- include('./partials/header') %> 
+
+    <main>
+        <section>
+            <div class="d-flex justify-content-between">
+                <h2>Agregar Producto</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="visible" name="visible" checked>
+                        <label class="form-check-label" for="visible">
+                          Visible
+                        </label>
+                      </div>
+            </div>
+            <hr>
+            <form method="POST" action="" enctype="multipart/form-data">
+                <article>
+                    
+                <div class="register__form-box">
+                    <label for="name">Nombre del producto</label>
+                    <input class="register__form-input" type="text" id="name" name="name">
+                </div>
+                <div class="register__form-box">
+                    <label for="price">Precio</label>
+                    <input class="register__form-input" type="number" id="price" name="price">
+                </div>
+                <div class="register__form-box">
+                    <label for="price">Unidades</label>
+                    <input class="register__form-input" type="number" id="unidades" name="unidades">
+                </div>
+                <div class="register__form-box">
+                        <label for="category">Categorias</label>
+                        <select class="register__form-select" name="category" id="category">
+                            <option value="" hidden selected>Selecciona la categoría...</option>
+                          <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.name %></option>
+                          <% }) %>
+                        </select>
+                </div>
+                <div class="register__form-box">
+                    <label for="origin">Origen</label>
+                    <select class="register__form-select" name="origin" id="origin">
+                        <option value="" hidden selected>Selecciona el origen...</option>
+                        <option value="argenina">argenina</option>
+                        <option value="uruguay">uruguay</option>
+                        <option value="chile">chile</option>
+                        <option value="china">china</option>
+                    </select>
+                </div>
+  
+                <div class="register__form-box">
+                  <label for="image">Imagen</label>
+                  <input class="register__form-input" type="file" id="image" name="image" accept="image/*">
+              </div>
+              
+            </article>
+               
+            <div class="register__form-box d-flex justify-content-end align-items-end">
+                <button type="reset" class="me-2 btn btn-secondary">Limpiar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+               
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

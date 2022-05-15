@@ -1,0 +1,73 @@
+.register main{
+    padding: 0 20px;
+}
+.register section{
+    width: 100%;
+    background-color: white;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px grey;
+}
+.register h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+.register form{
+    margin-top: 30px;
+}
+
+.register__form-box{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.register h4{
+    margin-bottom: 10px;
+}
+
+.register__form-input, .register__form-select{
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px 5px;
+}
+
+.register__text-error{
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.register__radio-box{
+    margin: 0 0 10px 5px;
+}
+
+.register__center{
+   text-align: center;
+}
+
+.register button{
+    border: none;
+    padding: 10px;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+@media (min-width:768px){
+    .register article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .register article .register__form-box{
+        width: 48%;
+    }
+}
+
+@media (min-width:1024px){
+    .register section{
+        width: 60%;
+    }
+}
