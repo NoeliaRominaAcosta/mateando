@@ -5,51 +5,183 @@
     }) %> 
 <body>
     <%- include('./partials/header') %> 
-<main>
-    <div class="slit-screen">
-        <div class="left">
-            <section class="copy">
-                <h1>Registrate en mateando</h1>
-                <p>Más de 500 productos</p>
-            </section>
-        </div>
-        <div class="right">
-            <form action="">
-                <section class="copy">
-                    <h2>Registrate</h2>
-                    <div class="register-container">
-                        <p>¿Ya tenés una cuenta? <a href="#"><strong>Inicia sesión</strong></strong></a></p>
+
+        <div class="container">
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your email" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter mobile number" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select required>
+                                    <option disabled selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input type="text" placeholder="Enter your ccupation" required>
+                            </div>
+                        </div>
                     </div>
-                </section>
-                <div class="input-container name">
-                    <label for="fname">Nombre completo</label>
-                    <input id="fname" name="fname" type="text">
+    
+                    <div class="details ID">
+                        <span class="title">Identity Details</span>
+    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>ID Type</label>
+                                <input type="text" placeholder="Enter ID type" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>ID Number</label>
+                                <input type="number" placeholder="Enter ID number" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Issued Authority</label>
+                                <input type="text" placeholder="Enter issued authority" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Issued State</label>
+                                <input type="text" placeholder="Enter issued state" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Issued Date</label>
+                                <input type="date" placeholder="Enter your issued date" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Expiry Date</label>
+                                <input type="date" placeholder="Enter expiry date" required>
+                            </div>
+                        </div>
+    
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div> 
                 </div>
-                <div class="input-container email">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email">
+    
+                <div class="form second">
+                    <div class="details address">
+                        <span class="title">Address Details</span>
+    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Address Type</label>
+                                <input type="text" placeholder="Permanent or Temporary" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Nationality</label>
+                                <input type="text" placeholder="Enter nationality" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>State</label>
+                                <input type="text" placeholder="Enter your state" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>District</label>
+                                <input type="text" placeholder="Enter your district" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Block Number</label>
+                                <input type="number" placeholder="Enter block number" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Ward Number</label>
+                                <input type="number" placeholder="Enter ward number" required>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="details family">
+                        <span class="title">Family Details</span>
+    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Father Name</label>
+                                <input type="text" placeholder="Enter father name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Mother Name</label>
+                                <input type="text" placeholder="Enter mother name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Grandfather</label>
+                                <input type="text" placeholder="Enter grandfther name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Spouse Name</label>
+                                <input type="text" placeholder="Enter spouse name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Father in Law</label>
+                                <input type="text" placeholder="Father in law name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Mother in Law</label>
+                                <input type="text" placeholder="Mother in law name" required>
+                            </div>
+                        </div>
+    
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+                            
+                            <button class="sumbit">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div> 
                 </div>
-                <div class="input-container password">
-                    <label for="password">Contraseña</label>
-                    <input id="password" name="password" type="password" placeholder="más de 8 caracteres">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <div class="input-container cta">
-                    <label for="" class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkmark">
-                            Suscribite a novedades
-                        </span>
-                    </label>
-                </div>
-                <button class="singup-btn" type="submit">Susribirme</button>
-                <section class="copy-left">
-                    <p><span class="small">Al continuar aceptas nuestros<a href="#"></a>términos y condiciones</span></p>
-                </section>
             </form>
         </div>
-    </div>
-</main>
+    
+        <!--<script src="script.js"></script>-->
+    </body>
 
 
     <%- include('./partials/footer') %> 

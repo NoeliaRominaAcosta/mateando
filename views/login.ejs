@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head',{
-        title : 'Registrate'
+        title : 'Inicia sesión'
     }) %> 
 <body>
     <%- include('./partials/header') %> 
-<main>
-    <div class="slit-screen">
-        <div class="left">
-            <section class="copy">
-                <h1>Registrate en mateando</h1>
-                <p>Más de 500 productos</p>
-            </section>
-        </div>
-        <div class="right">
-            <form action="">
-                <section class="copy">
-                    <h2>Registrate</h2>
-                    <div class="register-container">
-                        <p>¿Ya tenés una cuenta? <a href="#"><strong>Inicia sesión</strong></strong></a></p>
+
+        <div class="container">
+            <form action="" method="POST">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+    
+                        <div class="fields">
+                          
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your email" required name="email">
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Password</label>
+                                <input type="password" placeholder="Enter your ccupation" required name="password">
+                            </div>
+                        </div>
                     </div>
-                </section>
-               
-                <div class="input-container email">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email">
+    
+                    
                 </div>
-                <div class="input-container password">
-                    <label for="password">Contraseña</label>
-                    <input id="password" name="password" type="password" placeholder="más de 8 caracteres">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <section class="copy-left">
-                    <p><span class="small">Al continuar aceptas nuestros<a href="#"></a>términos y condiciones</span></p>
-                </section>
+    
             </form>
         </div>
-    </div>
-</main>
+    
+        <!--<script src="script.js"></script>-->
+    </body>
 
 
     <%- include('./partials/footer') %> 

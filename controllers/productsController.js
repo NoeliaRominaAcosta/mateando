@@ -27,7 +27,9 @@ module.exports = {
           id : +lastID + 1,
           name : name.trim(),
           price : +price,
-          category : +category
+          category : +category,
+          description : description.trim(),
+          image : image
         }
         
         products.push(newProduct)

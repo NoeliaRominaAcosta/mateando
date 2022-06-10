@@ -206,6 +206,10 @@ transition: 0.2s;
     color: #37561b;
 }
 
+#product1 .pro .image-container{
+object-fit: cover;
+
+}
 #product1 .pro .cart {
 
     width: 40px;

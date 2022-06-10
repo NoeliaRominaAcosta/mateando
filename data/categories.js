@@ -17,6 +17,11 @@ module.exports = [
           id: 3,
           name : 'gatitos',
           price : 3300
+        },
+        {
+          id : 4,
+          name: 'producto de prueba',
+          price: 5000,
         }
       ]
     },

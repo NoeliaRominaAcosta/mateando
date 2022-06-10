@@ -15,12 +15,12 @@
 
     <section id="product1" class="section-p1">
       <div class="pro-container">
-          <% mates.forEach(({name, id, price}) => { %>
+          <% mates.forEach(({name, id, price,image}) => { %>
             <!-- esto corresponde al data/categories, ahi estan las categorias con un
             array de productos que tienen las propiedades del destructuring -->
            <div class="pro">
-                <div class="img">
-                  <!-- mate de madera con flores -->
+                <div class="image-container">
+                    <a href="/products/detail/<%= id %> "><img src="/images/<%= image %> " alt=""></a>
                 </div>
                 <div class="des">
                     <span>La rosenda</span>
@@ -40,12 +40,13 @@
                 </div>
             </div>
           <% }) %>
-          <% termos.forEach(({name, id, price}) => { %>
+          <% termos.forEach(({name, id, price,image}) => { %>
              <!-- esto corresponde al data/categories, ahi estan las categorias con un
             array de productos que tienen las propiedades del destructuring -->
             <div class="pro">
-                 <div class="img">
-                   <!-- mate de madera con flores -->
+                 <div class="image-container">
+                    <a href="/products/detail/<%= id %> "><img src="/images/<%= image %> " alt=""></a>
+
                  </div>
                  <div class="des">
                      <span>La rosenda</span>
@@ -65,12 +66,13 @@
                  </div>
              </div>
            <% }) %>
-           <% kits.forEach(({name, id, price}) => { %>
+           <% kits.forEach(({name, id, price, image}) => { %>
              <!-- esto corresponde al data/categories, ahi estan las categorias con un
             array de productos que tienen las propiedades del destructuring -->
             <div class="pro">
-                 <div class="img">
-                   <!-- mate de madera con flores -->
+                 <div class="image-container">
+                    <a href="/products/detail/<%= id %> "><img src="/images/<%= image %> " alt=""></a>
+
                  </div>
                  <div class="des">
                      <span>La rosenda</span>

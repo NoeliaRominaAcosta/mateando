@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {products, detail, getByCategory, store, add} = require('../controllers/productsController')
+const {products, detail, getByCategory, store, add, edit} = require('../controllers/productsController')
 const multer = require('multer');
 
 /* MULTER */
@@ -20,6 +20,7 @@ const upload = multer({
 router
     .get('/', products)
     .get('/add', add)
+    .get('/edit/:id', edit)
     .post('/add',upload.single('image'),store)
     .get('/detail/:idProduct', detail)
     .get('/category/:idCategory/:id?', getByCategory);

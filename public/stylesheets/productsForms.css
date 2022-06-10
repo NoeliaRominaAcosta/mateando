@@ -21,7 +21,14 @@
     margin-bottom: 20px;
     width: 100%;
 }
-
+.register__form-box label{
+    display: block;
+    margin: 10px auto;
+}
+.register__form-box textarea {
+    width : 100%;
+    text-align: left;
+}
 .register h4{
     margin-bottom: 10px;
 }
