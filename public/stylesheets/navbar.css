@@ -3,12 +3,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 80px;
-    background: #04622d;
+    background: #289055;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 10;
     position: sticky;
     top: 0;
     left: 0;
+    height: 80px;
 }
 
 #header img {

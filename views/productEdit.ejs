@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head',{
+<%- include('./partials/head',{
         title : 'Nuevo producto'
-    })  %> 
+    })  %>
 
 
-<body class="register">
-    <%- include('./partials/header') %> 
+<body class="productAdmin">
+    <%- include('./partials/header') %>
 
     <main>
-        <section>
-            <h2>Editar Producto: <%= product.name %></h2>
-            <hr>
-            <form method="POST" action="/products/update/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
+        <section class="sectionEdit">
+            <h1>Editando: <%= product.name %></h1>
+            <form class="formProducts2" method="POST" action="/products/update/<%= product.id %>?_method=PUT"
+                enctype="multipart/form-data">
                 <article>
-                    <div><img src="/images/<%= product.img %>" alt=""></div>
-                <div class="register__form-box">
-                    <label for="name">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="name" name="name" value="<%= product.name %>">
-                </div>
-                <div class="register__form-box">
-                    <label for="price">Precio</label>
-                    <input class="register__form-input" type="number" id="price" name="price" value="<%= product.price %>">
-                </div>
-         
-                <div class="register__form-box">
+                    <div class="images-container">
+
+                        <img src="/images/<%= product.image %>" alt="">
+                    </div>
+                    <div class="productAdmin__form-box">
+                        <label for="name">Nombre del producto</label>
+                        <input class="productAdmin__form-input" type="text" id="name" name="name"
+                            value="<%= product.name %>">
+                    </div>
+                    <div class="productAdmin__form-box">
+                        <label for="brand">Marca del producto</label>
+                        <input class="productAdmin__form-input" type="text" id="brand" name="brand"
+                            value="<%= product.name %>">
+                    </div>
+                    <div class="productAdmin__form-box">
+                        <label for="price">Precio</label>
+                        <input class="productAdmin__form-input" type="number" id="price" name="price"
+                            value="<%= product.price %>">
+                    </div>
+
+                    <div class="productAdmin__form-box">
                         <label for="category">Categorias</label>
-                        <select class="register__form-select" name="category" id="category">
+                        <select class="productAdmin__form-boxect" name="category" id="category">
                             <% categories.forEach(category => { %>
-                              <option value="<%= category.id %>" <%= category.id === product.category ? 'selected' : null %>><%= category.name %></option>
+                            <option value="<%= category.id %>"
+                                <%= category.id === product.category ? 'selected' : null %>><%= category.name %>
+                            </option>
                             <% }) %>
-                          </select>
+                        </select>
+                    </div>
+
+                    <div class="productAdmin__form-box">
+                        <label for="image">Imagen</label>
+                        <input class="productAdmin__form-input" type="file" id="image" name="image" accept="image/*">
+                    </div>
+
+                </article>
+
+                <div class="buttons">
+                    <button class="btnAdmin" type="submit">Guardar</button>
+
+                    <button class="btnAdmin" type="reset">Cancelar</button>
                 </div>
-               
-                <div class="register__form-box">
-                    <label for="image">Imagen</label>
-                    <input class="register__form-input" type="file" id="image" name="image" accept="image/*">
-                </div>
-                 
-            </article>
-               
-            <div class="register__form-box d-flex justify-content-end align-items-end">
-                <button type="reset" class="me-2 btn  btn-secondary">Limpiar</button>
-                <button type="submit" class="btn btn-success">Guardar</button>
-            </div>
-                  
             </form>
         </section>
 

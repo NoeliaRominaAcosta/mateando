@@ -1,10 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 const categories = require('../data/categories');
-const products = require('../data/products.json');
 
+const productsFilePath = path.join(__dirname, '../data/products.json');
+
+
+const readProducts = () => {
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	return products
+}
+const saveProducts = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
 module.exports = {
+  
     products : (req,res) => {
+      let products = readProducts();
       const mates = products.filter(product => product.category === 1);
       const termos = products.filter(product => product.category === 2);
       const kits = products.filter(product => product.category === 3);
@@ -21,24 +30,28 @@ module.exports = {
         })
       },
       store : (req,res) => {
-        let {name, price, category} = req.body;
-        let lastID = products[products.length -1].id;
+        let products = readProducts();
+
+        const {name, price, category, description, brand, stock} = req.body;
+       
         let newProduct = {
-          id : +lastID + 1,
-          name : name.trim(),
+        	id : products[products.length - 1].id + 1,
+          name: name.trim(),
           price : +price,
           category : +category,
           description : description.trim(),
-          image : image
+          brand,
+          stock,
+          image : req.file ? req.file.filename : "default-image.png",
         }
         
         products.push(newProduct)
-
-        fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8')
+        saveProducts(products)
         return res.redirect('/')
       },
 
       edit : (req,res) => {
+        let products = readProducts();
         const {id} =req.params;
         const product = products.find(product => product.id === +id);
   
@@ -48,15 +61,21 @@ module.exports = {
         })
       },
     detail : (req,res) => {
+      let products = readProducts();
       const {idProduct} = req.params 
     /**ese id va a volver a la vista como valor de la propiedad imagen */
      
     const product = products.find(product => product.id === +idProduct);
     return res.render('detail', {
         /**voy a renderizar la vista y le doy esa informacion */
-       product
+      
+        product
 
       })
+    },
+    update: (req,res) => {
+      let products = readProducts();
+
     },
     getByCategory : (req,res) => {
 

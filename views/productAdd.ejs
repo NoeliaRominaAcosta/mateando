@@ -6,34 +6,38 @@
     })  %> 
 
 
-<body class="register">
+<body class="productAdmin">
     <%- include('./partials/header') %> 
 
     <main>
         <section>
-            <div class="d-flex justify-content-between">
-                <h2>Agregar Producto</h2>
+            <div>
+                <h1>Agregar Producto</h1>
                     
             </div>
-            <hr>
-            <form method="POST" action="" enctype="multipart/form-data">
+         
+            <form method="POST" action="" enctype="multipart/form-data"  class="formProducts">
                 <article>
                     
-                <div class="register__form-box">
+                <div class="productAdmin__form-box">
                     <label for="name">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="name" name="name">
+                    <input class="productAdmin__form-input" type="text" id="name" name="name">
                 </div>
-                <div class="register__form-box">
+                <div class="productAdmin__form-box">
+                    <label for="brand">Marca del producto</label>
+                    <input class="productAdmin__form-input" type="text" id="brand" name="brand">
+                </div>
+                <div class="productAdmin__form-box">
                     <label for="price">Precio</label>
-                    <input class="register__form-input" type="number" id="price" name="price">
+                    <input class="productAdmin__form-input" type="number" id="price" name="price">
                 </div>
-                <div class="register__form-box">
-                    <label for="price">Unidades</label>
-                    <input class="register__form-input" type="number" id="unidades" name="unidades">
+                <div class="productAdmin__form-box">
+                    <label for="price">Stock</label>
+                    <input class="productAdmin__form-input" type="text" id="stock" name="stock">
                 </div>
-                <div class="register__form-box">
+                <div class="productAdmin__form-box">
                         <label for="category">Categorias</label>
-                        <select class="register__form-select" name="category" id="category">
+                        <select class="productAdmin__form-input" name="category" id="category">
                             <option value="" hidden selected>Selecciona la categoría...</option>
                           <% categories.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.name %></option>
@@ -41,22 +45,22 @@
                         </select>
                 </div>
                 
-                <div class="register__form-box">
+                <div class="productAdmin__form-box">
                   <label for="image">Imagen</label>
-                  <input class="register__form-input" type="file" id="image" name="image" accept="image/*">
+                  <input class="productAdmin__form-input" type="file" id="image" name="image" accept="image/*">
               </div>
-              <div class="register__form-box">
+              <div class="productAdmin__form-box">
                 <label for="description">descripcion</label>
-            <textarea name="description" id="description" cols="30" rows="10">
+            <textarea  name="description" id="description" cols="30" rows="10">
             
             </textarea>
             </div>
             </article>
-               
-            <div class="register__form-box d-flex justify-content-end align-items-end">
-                <button type="reset" class="me-2 btn btn-secondary">Limpiar</button>
-                <button type="submit" class="btn btn-primary">Guardar</button>
-            </div>
+            <div class="buttons">
+                <button class="btnAdmin" type="submit">Guardar</button>
+              
+             <button class="btnAdmin" type="reset">Cancelar</button>
+               </div>
                
             </form>
         </section>

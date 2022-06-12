@@ -1,80 +1,144 @@
-.register main{
-    padding: 0 20px;
+
+.productAdmin main{
+    padding: 20px 0;
 }
-.register section{
-    width: 100%;
-    background-color: white;
-    margin: 30px auto;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 5px 5px 10px grey;
+.productAdmin main h1{
+    padding: 10px 0;
+
 }
-.register h1{
+.productAdmin section{
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+
+}
+
+.productAdmin h1{
     text-transform: uppercase;
     text-align: center;
 }
-.register form{
+
+.productAdmin label{
+    font-size: 16px;
+    font-weight: 500;
+}
+.productAdmin form{
     margin-top: 30px;
 }
-
-.register__form-box{
-    margin-bottom: 20px;
+.productAdmin article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.productAdmin textarea{
+    margin: 15px 0;
+    display: block;
     width: 100%;
 }
-.register__form-box label{
-    display: block;
-    margin: 10px auto;
+.productAdmin__form-box{
+    text-align: center;
+    margin: 15px 0;
+    width: 80%;
 }
-.register__form-box textarea {
-    width : 100%;
-    text-align: left;
+.productAdmin__form-box span{
+    color: red;
+    font-size: 14px;
+    text-align: center;
 }
-.register h4{
+.productAdmin h4{
     margin-bottom: 10px;
 }
 
-.register__form-input, .register__form-select{
+.productAdmin__form-input,  .productAdmin__form-select{
+text-align: center;
+    border-radius: 15px;
+    border: 2px solid rgb(124, 192, 142);
+    height: 45px;
     width: 100%;
     margin: 10px 0 0;
-    padding: 10px 5px;
+    padding: 5px 5px;
+}
+.productAdmin__form-input input:invalid {
+    background-color: red;
+
 }
 
-.register__text-error{
-    color: red;
-    font-size: 0.8rem;
-    margin-left: 5px;
+.productAdmin .buttons{
+display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.register__radio-box{
-    margin: 0 0 10px 5px;
-}
-
-.register__center{
-   text-align: center;
-}
-
-.register button{
+.productAdmin .btnAdmin{
     border: none;
     padding: 10px;
-    background-color: steelblue;
-    color: white;
+    margin: 0 8px;
+    background-color: rgb(103, 177, 87);
+    color: rgb(11, 74, 34);
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
 }
+.productAdmin .btnAdmin:nth-last-child(1):hover{
+    background-color: red;
+    border: none;
+}
+.productAdmin .btnAdmin:hover{
+    background-color:darkgreen;
+    color: rgb(255, 255, 255);
+ 
+}
+.formProducts, .formProducts2{
+    padding: 15px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
+  background-image: linear-gradient(-105deg, #9bbcf6 0%, #f2e796 100%);
+  background-image: linear-gradient(to top, #99e5ad 0%, #6bedf6 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: .85;
+}
+.images-container img{
+    width: 50%;
+    border: 5px double rgb(160, 205, 167);
+    margin: 10px 0;
+    box-shadow: 5px 3px 15px 0px rgba(0,0,0,0.31);
+}
+.productAdmin .sectionEdit{
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
 
+}
 @media (min-width:768px){
-    .register article{
+    .productAdmin article{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .register article .register__form-box{
+    .productAdmin article .register__form-box{
         width: 48%;
+    }
+    .productAdmin .sectionEdit{
+        width: 60%;
+      
+    
     }
 }
 
 @media (min-width:1024px){
-    .register section{
-        width: 60%;
-    }
+  .images-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productAdmin .sectionEdit{
+    width: 50%;
+ }
+ .productAdmin section{
+    width: 50%;
+ }
 }

@@ -4,167 +4,177 @@
       "name": "mate madera c/ flores",
       "price": 2500,
       "category": 1,
-      "description" : "descripcion por defecto",
-       "image" : "acero-cuero-azul.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-cuero-azul.jpg"
    },
    {
       "id": 2,
       "name": "frida khalo",
       "price": 2800,
       "category": 1,
-      "description" : "descripcion por defecto",
-       "image" : "acero-cuero.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-cuero.jpg"
    },
    {
       "id": 3,
       "name": "gatitos",
       "price": 3300,
       "category": 1,
-      "description" : "descripcion por defecto",
-       "image" : "acero-cuero-azul.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-cuero-azul.jpg"
    },
    {
       "id": 4,
       "name": "bala",
       "price": 5300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-gatos.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-gatos.jpg"
    },
    {
       "id": 5,
       "name": "stanley",
       "price": 9300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-cactus.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-cactus.jpg"
    },
    {
       "id": 6,
       "name": "margaritas",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-ceramica-llama.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-ceramica-llama.jpg"
    },
    {
       "id": 7,
       "name": "madera",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-mochila-celeste.jpg"
+      "description": "descripcion por defecto",
+      "image": "acero-mochila-celeste.jpg"
    },
    {
       "id": 8,
       "name": "calabaza",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-rosa.png"
+      "description": "descripcion por defecto",
+      "image": "acero-rosa.png"
    },
    {
       "id": 9,
       "name": "ceramica",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-rosa2.png"
+      "description": "descripcion por defecto",
+      "image": "acero-rosa2.png"
    },
    {
       "id": 10,
-      "name": "alpaca",
+      "name": "Set matero",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acero-verde.png"
+      "description": "descripcion por defecto",
+      "image": "acero-verde.png"
    },
    {
       "id": 11,
       "name": "blanco",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acerogamusa.jpg"
+      "description": "descripcion por defecto",
+      "image": "acerogamusa.jpg"
    },
    {
       "id": 12,
       "name": "mate con flores",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "acerogamusa2.jpg"
+      "description": "descripcion por defecto",
+      "image": "acerogamusa2.jpg"
    },
    {
       "id": 13,
       "name": "diseño gatitos",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "aceroycuero2.jpg"
+      "description": "descripcion por defecto",
+      "image": "aceroycuero2.jpg"
    },
    {
       "id": 14,
       "name": "gris",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "aceroycuero.jpg"
+      "description": "descripcion por defecto",
+      "image": "aceroycuero.jpg"
    },
    {
       "id": 15,
       "name": "violeta",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "aluminio.jpg"
+      "description": "descripcion por defecto",
+      "image": "aluminio.jpg"
    },
    {
       "id": 16,
       "name": "cuero",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "ceramica3.jpg"
+      "description": "descripcion por defecto",
+      "image": "ceramica3.jpg"
    },
    {
       "id": 17,
       "name": "'madera'",
       "price": 2300,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "aluminio3.jpg"
+      "description": "descripcion por defecto",
+      "image": "aluminio3.jpg"
    },
    {
       "id": 18,
       "name": "'cabalaza'",
       "price": 2900,
       "category": 2,
-      "description" : "descripcion por defecto",
-        "image" : "bala-aqua.jpg"
+      "description": "descripcion por defecto",
+      "image": "bala-aqua.jpg"
    },
    {
       "id": 19,
       "name": "'cuero y acero'",
       "price": 3700,
       "category": 3,
-      "description" : "descripcion por defecto",
-       "image" : "bala-negro.jpg"
+      "description": "descripcion por defecto",
+      "image": "bala-negro.jpg"
    },
    {
       "id": 20,
       "name": "cuero",
       "price": 3200,
       "category": 3,
-      "description" : "descripcion por defecto",
-       "image" : "ceramica6.jpg"
+      "description": "descripcion por defecto",
+      "image": "ceramica6.jpg"
    },
    {
       "id": 21,
       "name": "'ceramica",
       "price": 2800,
       "category": 3,
-      "description" : "descripcion por defecto",
-       "image" : "ceramica2.jpg"
+      "description": "descripcion por defecto",
+      "image": "ceramica2.jpg"
+   },
+   {
+      "id": 22,
+      "name": "producto de prueba",
+      "price": 3500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1655075785243.jpg"
    }
 ]
