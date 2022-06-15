@@ -3,8 +3,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const session = require('express-session');
 const methodOverride = require('method-override');
+
 /**Routes imports */
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -23,7 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret : 'Mateando',
+  resave: false,
+  saveUninitialized: true,
+  cookie : {}
 
+}));
 /**ROUTES  */
 app.use('/', indexRouter);
 app.use('/products', productsRouter)

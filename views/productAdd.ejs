@@ -21,39 +21,46 @@
                     
                 <div class="productAdmin__form-box">
                     <label for="name">Nombre del producto</label>
-                    <input class="productAdmin__form-input" type="text" id="name" name="name">
+                    <input class="productAdmin__form-input" type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null%>">
+                     <span class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                 </div>
                 <div class="productAdmin__form-box">
                     <label for="brand">Marca del producto</label>
-                    <input class="productAdmin__form-input" type="text" id="brand" name="brand">
+                    <input class="productAdmin__form-input" type="text" id="brand" name="brand" value="<%= locals.old && old.brand ? old.brand : null%>">
+                     <span class="text-danger"><%= locals.errors && errors.brand ? errors.brand.msg : null%> </span>
                 </div>
                 <div class="productAdmin__form-box">
                     <label for="price">Precio</label>
-                    <input class="productAdmin__form-input" type="number" id="price" name="price">
+                    <input class="productAdmin__form-input" type="number" id="price" name="price" value="<%= locals.old && old.price ? old.price : null%>">
+                     <span class="text-danger"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
                 </div>
                 <div class="productAdmin__form-box">
                     <label for="price">Stock</label>
-                    <input class="productAdmin__form-input" type="text" id="stock" name="stock">
+                    <input class="productAdmin__form-input" type="text" id="stock" name="stock" value="<%= locals.old && old.stock ? old.stock : null%>">
+                     <span class="text-danger"><%= locals.errors && errors.stock ? errors.stock.msg : null%> </span>
                 </div>
                 <div class="productAdmin__form-box">
                         <label for="category">Categorias</label>
-                        <select class="productAdmin__form-input" name="category" id="category">
+                        <select class="productAdmin__form-input" name="category" id="category" value="<%= locals.old && old.category ? old.category : null%>">
                             <option value="" hidden selected>Selecciona la categoría...</option>
                           <% categories.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.name %></option>
                           <% }) %>
                         </select>
+                         <span class="text-danger"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
                 </div>
                 
                 <div class="productAdmin__form-box">
                   <label for="image">Imagen</label>
                   <input class="productAdmin__form-input" type="file" id="image" name="image" accept="image/*">
+                  
               </div>
               <div class="productAdmin__form-box">
                 <label for="description">descripcion</label>
-            <textarea  name="description" id="description" cols="30" rows="10">
+            <textarea  name="description" id="description" cols="30" rows="10" value="<%= locals.old && old.description ? old.description : null%>">
             
             </textarea>
+             <span class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
             </div>
             </article>
             <div class="buttons">

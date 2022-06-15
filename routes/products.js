@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path')
 const multer = require('multer');
-
+const productsValidations = require('../validations/productValidations')
 const {products, detail, getByCategory, store, add, edit, update, remove} = require('../controllers/productsController')
 
 
@@ -24,8 +24,8 @@ router
     .get('/', products)
     .get('/add', add)
     .get('/edit/:id', edit)
-    .put('/update/:id', upload.single('image'),update)
-    .post('/add',upload.single('image'),store)
+    .put('/update/:id', upload.single('image'),productsValidations,update)
+    .post('/add',upload.single('image'),productsValidations,store)
     .get('/detail/:idProduct', detail)
     .get('/category/:idCategory/:id?', getByCategory)
     .delete('/remove/:id', remove)

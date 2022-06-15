@@ -23,23 +23,23 @@
                     <div class="productAdmin__form-box">
                         <label for="name">Nombre del producto</label>
                         <input class="productAdmin__form-input" type="text" id="name" name="name"
-                            value="<%= product.name %>">
+                            value="<%= product.name %>"> <span class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                     </div>
                     <div class="productAdmin__form-box">
                         <label for="brand">Marca del producto</label>
                         <input class="productAdmin__form-input" type="text" id="brand" name="brand"
-                            value="<%= product.brand %>">
+                            value="<%= product.brand %>"> <span class="text-danger"><%= locals.errors && errors.brand ? errors.brand.msg : null%> </span>
                     </div>
                     <div class="productAdmin__form-box">
                         <label for="price">Precio</label>
                         <input class="productAdmin__form-input" type="number" id="price" name="price"
-                            value="<%= product.price %>">
+                            value="<%= product.price %>"> <span class="text-danger"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
                     </div>
 
                     <div class="productAdmin__form-box">
                         <label for="price">Stock</label>
                         <input class="productAdmin__form-input" type="text" id="stock" name="stock"
-                        value="<%= product.stock %>">
+                        value="<%= product.stock %>"> <span class="text-danger"><%= locals.errors && errors.stock ? errors.stock.msg : null%> </span>
                     </div>
                     <div class="productAdmin__form-box">
                         <label for="category">Categorias</label>
@@ -49,14 +49,15 @@
                                 <%= category.id === product.category ? 'selected' : null %>><%= category.name %>
                             </option>
                             <% }) %>
-                        </select>
+                        </select> 
+                        <span class="text-danger"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
                     </div>
                     <div class="productAdmin__form-box">
                         <label for="description">descripcion</label>
                     <textarea  name="description" id="description" cols="30" rows="10"  value="<%= product.description %>">
                         
                     </textarea>
-                    
+                     <span class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
                   
                     </div>
                     <div class="productAdmin__form-box">
