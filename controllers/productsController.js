@@ -1,19 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const categories = require('../data/categories');
+const products = require("../data/products.json");
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-
-
-const readProducts = () => {
-	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-	return products
-}
-const saveProducts = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
 module.exports = {
   
     products : (req,res) => {
-      let products = readProducts();
+     
       const mates = products.filter(product => product.category === 1);
       const termos = products.filter(product => product.category === 2);
       const kits = products.filter(product => product.category === 3);
@@ -30,7 +23,7 @@ module.exports = {
         })
       },
       store : (req,res) => {
-        let products = readProducts();
+       
 
         const {name, price, category, description, brand, stock} = req.body;
        
@@ -46,12 +39,17 @@ module.exports = {
         }
         
         products.push(newProduct)
-        saveProducts(products)
+        
+        fs.writeFileSync(
+          path.resolve(__dirname, "..", "data", "products.json"),
+          JSON.stringify(products, null, 3),
+          "utf-8"
+        );
         return res.redirect('/')
       },
 
       edit : (req,res) => {
-        let products = readProducts();
+      
         const {id} =req.params;
         const product = products.find(product => product.id === +id);
   
@@ -61,7 +59,7 @@ module.exports = {
         })
       },
     detail : (req,res) => {
-      let products = readProducts();
+     
       const {idProduct} = req.params 
     /**ese id va a volver a la vista como valor de la propiedad imagen */
      
@@ -74,8 +72,49 @@ module.exports = {
       })
     },
     update: (req,res) => {
-      let products = readProducts();
+   
+      const { id } = req.params;
+     const {name, price, category, description, brand, stock} = req.body;
+    
 
+      const productsUpdated = products.map(product => {
+        if(product.id === +id){
+         let productUpdated = {
+            ...product,
+            name: name.trim(),
+            price : +price,
+            category : +category,
+            description : description.trim(),
+            brand :brand.trim(),
+            stock:stock.trim(),
+          /* If there is a file, then the filename will be the image. If there is no file, then the
+          image will be the product.image. */
+            image : req.file ? req.file.filename : product.image,
+          }
+          if (req.file) {
+            if (
+              fs.existsSync(
+                path.resolve(__dirname, "..", "public", "images", product.image)
+              ) &&
+              product.image !== "default-image.png"
+            ) {
+              fs.unlinkSync(
+                path.resolve(__dirname, "..", "public", "images", product.image)
+              );
+            }
+          }
+          return productUpdated
+        }
+        return product
+      })
+      
+  
+      fs.writeFileSync(
+        path.resolve(__dirname, "..", "data", "products.json"),
+        JSON.stringify(productsUpdated, null, 3),
+        "utf-8"
+      );
+     res.redirect('/products');
     },
     getByCategory : (req,res) => {
 
@@ -89,6 +128,19 @@ module.exports = {
         products
         /**mando el objeto*/
       })
+    },
+    remove: (req, res) => {
+      const { id } = req.params;
+
+      const productFilter = products.filter((product) => product.id !== +id);
+  
+      fs.writeFileSync(
+        path.resolve(__dirname, "..", "data", "products.json"),
+        JSON.stringify(productFilter, null, 3),
+        "utf-8"
+      );
+  
+      return res.redirect("/");
     }
       
   }

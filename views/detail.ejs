@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head',{
-        title : 'Mateando'
+        title : 'detalle'
     }) %>
 
 <body class="detail">
@@ -37,25 +37,16 @@
          
            
             <div class="selection">
-                <select name="mate" id="mate">
-                    <option value="mate">Selecciona</option>
-                    <option value="mate">Blanco</option>
-                    <option value="mate">Negro</option>
-                    <option value="mate">Natural</option>
-                </select>
-                <input type="number" value="1" id="mate-detail">
-                <button class="normal">Agregar</button>
-               <a href="/products/edit/<%= product.id %> "><button style="margin-top: 10px;" class="normal">Editar</button></a> 
-                <a href="#"><button style="margin-top: 10px;" class="normal">Eliminar</button></a>
+               
+               <a href="/products/edit/<%= product.id %>"><button style="margin-top: 10px;" class="normal">Editar</button></a> 
+            
+                <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" style="margin-top: 10px;" class="normal">Eliminar</button>
+                </form>
             </div>
             <div class="description">
                 <h4>Detalles</h4>
-            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quos sit consequuntur, maiores perferendis nihil quaerat beatae delectus. Facere ab ad laboriosam fuga
-                ut nobis a eum, libero, in sit dolore.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero neque sunt et, dolore
-                fugiat. Et iusto omnis rerum ipsa perferendis harum! Nostrum facere et cum ab saepe pariatur
-                dolorum!</span>
+                <b><p><%= product.description %></p></b>
             </div>
             
         </div>

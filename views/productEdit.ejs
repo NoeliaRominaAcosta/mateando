@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%- include('./partials/head',{
-        title : 'Nuevo producto'
+        title : 'editar producto'
     })  %>
 
 
@@ -11,9 +11,10 @@
 
     <main>
         <section class="sectionEdit">
-            <h1>Editando: <%= product.name %></h1>
-            <form class="formProducts2" method="POST" action="/products/update/<%= product.id %>?_method=PUT"
-                enctype="multipart/form-data">
+          
+            <form class="formProducts2" method="POST" action="/products/update/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
+                <h1>Editando: <%= product.name %></h1>
+            
                 <article>
                     <div class="images-container">
 
@@ -27,7 +28,7 @@
                     <div class="productAdmin__form-box">
                         <label for="brand">Marca del producto</label>
                         <input class="productAdmin__form-input" type="text" id="brand" name="brand"
-                            value="<%= product.name %>">
+                            value="<%= product.brand %>">
                     </div>
                     <div class="productAdmin__form-box">
                         <label for="price">Precio</label>
@@ -35,6 +36,11 @@
                             value="<%= product.price %>">
                     </div>
 
+                    <div class="productAdmin__form-box">
+                        <label for="price">Stock</label>
+                        <input class="productAdmin__form-input" type="text" id="stock" name="stock"
+                        value="<%= product.stock %>">
+                    </div>
                     <div class="productAdmin__form-box">
                         <label for="category">Categorias</label>
                         <select class="productAdmin__form-boxect" name="category" id="category">
@@ -45,10 +51,17 @@
                             <% }) %>
                         </select>
                     </div>
-
+                    <div class="productAdmin__form-box">
+                        <label for="description">descripcion</label>
+                    <textarea  name="description" id="description" cols="30" rows="10"  value="<%= product.description %>">
+                        
+                    </textarea>
+                    
+                  
+                    </div>
                     <div class="productAdmin__form-box">
                         <label for="image">Imagen</label>
-                        <input class="productAdmin__form-input" type="file" id="image" name="image" accept="image/*">
+                        <input class="productAdmin__form-input" type="file" id="image" name="image" accept="image/*"  value="<%= product.image %>">
                     </div>
 
                 </article>

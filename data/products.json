@@ -1,13 +1,5 @@
 [
    {
-      "id": 1,
-      "name": "mate madera c/ flores",
-      "price": 2500,
-      "category": 1,
-      "description": "descripcion por defecto",
-      "image": "acero-cuero-azul.jpg"
-   },
-   {
       "id": 2,
       "name": "frida khalo",
       "price": 2800,
@@ -176,5 +168,15 @@
       "brand": "prueba",
       "stock": "20",
       "image": "image-1655075785243.jpg"
+   },
+   {
+      "id": 23,
+      "name": "producto de prueba2",
+      "price": 3600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "50",
+      "image": "image-1655318825698.avif"
    }
 ]
