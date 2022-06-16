@@ -1,19 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+   
     
 }
 
 h1 {
     font-size: 40px;
     line-height: 64px;
-
+    font-family: 'Satisfy', cursive;
   
 }
 
@@ -41,10 +40,15 @@ h6 {
 
 li {
     list-style: none;
+    
 }
+li a {
+    font-family: 'Montserrat', sans-serif;
 
+}
 a {
     text-decoration: none;
     color: #3ea66b;
+
 }
 

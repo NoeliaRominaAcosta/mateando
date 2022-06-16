@@ -3,37 +3,41 @@
     <%- include('./partials/head',{
         title : 'Inicia sesión'
     }) %> 
-<body>
+<body class="userForms">
     <%- include('./partials/header') %> 
 
-        <div class="container">
-            <form action="" method="POST">
-                <div class="form first">
-                    <div class="details personal">
-                        <span class="title">Personal Details</span>
-    
-                        <div class="fields">
-                          
-                            <div class="input-field">
-                                <label>Email</label>
-                                <input type="text" placeholder="Enter your email" required name="email">
-                            </div>
-    
-                            <div class="input-field">
-                                <label>Password</label>
-                                <input type="password" placeholder="Enter your ccupation" required name="password">
-                            </div>
-                        </div>
-                    </div>
-    
-                    
+    <main>
+        <section class="glass">
+         
+          <div class="container-user">
+            <div class="status">
+              <h1>Ingresar</h1>
+             
+            </div>
+            <div class="cards">
+             
+              <div class="card">
+               
+                <div class="card-info">
+                 <label for="email"><h3>Tu email</h3></label>
+                 <input type="email" name="email" id="">
                 </div>
-    
-            </form>
-        </div>
-    
-        <!--<script src="script.js"></script>-->
-    </body>
+               
+              </div>
+              <div class="card">
+               
+                <div class="card-info">
+                 <label for="password"><h3>Tu contraseña</h3></label>
+                 <input type="password" name="password" id="">
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+     
+   
 
 
     <%- include('./partials/footer') %> 
