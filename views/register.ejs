@@ -14,33 +14,50 @@
                 <h1>Registrate</h1>
                
               </div>
-              <div class="cards">
+              <form action="" method="POST" class="cards">
                
                 <div class="card">
-                 
+                  <div class="card-info">
+                    <label for="name"><h3>Tu nombre</h3></label>
+                    <input type="name" name="name" id="name"  value="<%= locals.old && old.name ? old.name : null %>">
+                    <span style="color:red"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+ 
+                   </div>
+                   </div>
+                   <div class="card">
                   <div class="card-info">
                    <label for="email"><h3>Tu email</h3></label>
-                   <input type="email" name="email" id="">
+                   <input type="email" name="email" id="email"  value="<%= locals.old && old.email ? old.email : null %>">
+                   <span style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+
                   </div>
-                 
-                </div>
-                <div class="card">
-                 
+                 </div>
+              
+                 <div class="card">
                   <div class="card-info">
                    <label for="password"><h3>Tu contraseña</h3></label>
-                   <input type="password" name="password" id="">
+                   <input type="password" name="password" id="password"  value="<%= locals.old && old.password ? old.password : null %>">
+                   <span  style="color:red"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+
                   </div>
-                 
-                </div>
-                <div class="card">
-                 
+                 </div>
+                
+                 <div class="card">
                   <div class="card-info">
                    <label for="password"><h3>Repetir contraseña</h3></label>
-                   <input type="password" name="password" id="">
+                   <input type="password" name="password2" id="password2"  value="<%= locals.old && old.password2 ? old.password2 : null %>">
+                   <span  style="color:red"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
+
                   </div>
                  
                 </div>
-              </div>
+               <div class="buttons">
+                <button type="submit">Registrate</button>
+                <a href="/"><button>Volver</button></a>
+           
+               </div>
+               
+              </form>
             </div>
           </section>
         </main>

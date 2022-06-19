@@ -16,13 +16,15 @@ module.exports = {
     return res.render('products', {
       mates,
       termos,
-      kits
+      kits,
+      user: req.session.userLogin
     })
   },
 
   add: (req, res) => {
     return res.render('productAdd', {
-      categories
+      categories,
+      user: req.session.userLogin
     })
   },
   store: (req, res) => {
@@ -60,7 +62,8 @@ module.exports = {
       return res.render('productAdd', {
         categories,
         errors: errors.mapped(),
-        old: req.body
+        old: req.body,
+        user: req.session.userLogin
       })
     }
 
@@ -76,7 +79,8 @@ module.exports = {
 
     return res.render('productEdit', {
       categories,
-      product
+      product,
+      user: req.session.userLogin
     })
   },
   detail: (req, res) => {
@@ -90,7 +94,8 @@ module.exports = {
     return res.render('detail', {
       /**voy a renderizar la vista y le doy esa informacion */
 
-      product
+      product,
+      user: req.session.userLogin
 
     })
   },
@@ -155,7 +160,8 @@ module.exports = {
           id :req.params.id,
           ...req.body
       },
-      errors : errors.mapped()
+      errors : errors.mapped(),
+      user: req.session.userLogin
     }
       )
     }
@@ -175,7 +181,8 @@ module.exports = {
 
     return res.render('categories', {
       name,
-      products
+      products,
+      user: req.session.userLogin
       /**mando el objeto*/
     })
   },

@@ -182,5 +182,15 @@
       "brand": "prueba",
       "stock": "50",
       "image": "image-1655318825698.avif"
+   },
+   {
+      "id": 24,
+      "name": "producto de prueba3",
+      "price": 2000,
+      "category": 3,
+      "description": "esta es una descripcion",
+      "brand": "prueba",
+      "stock": "50",
+      "image": "image-1655655160528.jpg"
    }
 ]

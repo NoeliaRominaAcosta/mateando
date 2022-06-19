@@ -1,0 +1,9 @@
+[
+   {
+      "id": 1,
+      "name": "normal",
+      "email": "noeliaromina20@gmail.com",
+      "password": "$2a$10$Yi9Fb75yOxADgIAUWaqE2OTpF0Cu0wGspz9DSnUJQAli7mfRH4d.6",
+      "rol": "admin"
+   }
+]

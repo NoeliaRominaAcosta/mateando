@@ -3,17 +3,26 @@
 
     <div>
         <ul id="navbar">
-            <li><a href="/products/add">Agregar</a></li>
+        
+            <% if (locals.userLogin?.rol==="admin") { %>
+              <li><a href="/products/add">Añadir productos</a></li>
 
-            <li><a href="/products">Catálogo</a></li>
-          <!--   <li><a href="#">Categorias</a></li> -->
-            <li><a href="/products/category/1">Mates</a></li>
-            <li><a href="/products/category/2">Termos</a></li>
-            <li><a href="/products/category/3">Kits</a></li>
-          <!--   <li><a href="#">Inicia Sesion</a></li>
-            <li><a href="#">Registrate</a></li> -->
+          <% } %>
+          <li><a href="/products">Catálogo</a></li>
+          <li><a href="/products/category/1">Mates</a></li>
+          <li><a href="/products/category/2">Termos</a></li>
+          <li><a href="/products/category/3">Kits</a></li>
+          <% if (!locals.userLogin) { %>
+              <li class="register"><a href="/users/register">Registrarse</a></li>
+              <li class="login"><a href="/users/login">Entrar</a></li>
+          <% }else{ %>
+             
             <li id="lg-bag"><a href="cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <a href="#"><i id="close" class="fa-solid fa-xmark"></i></a>
+
+          <% } %>
+
+
 
         </ul>
     </div>
