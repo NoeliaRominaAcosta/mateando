@@ -1,196 +1,823 @@
 [
    {
-      "id": 2,
-      "name": "aluminio",
+      "id": 1,
+      "name": "Botella aguamarina de acero",
       "price": 2800,
-      "category": 1,
-      "description": "",
-      "image": "acero-cuero.jpg",
-      "brand": "",
-      "stock": ""
-   },
-   {
-      "id": 3,
-      "name": "gatitos",
-      "price": 1000,
-      "category": 1,
-      "description": "sjdsahgdasd",
-      "image": "acero-cuero-azul.jpg",
-      "brand": "prueba",
-      "stock": "50"
-   },
-   {
-      "id": 4,
-      "name": "bala",
-      "price": 5300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-gatos.jpg"
-   },
-   {
-      "id": 5,
-      "name": "stanley",
-      "price": 9300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-cactus.jpg"
-   },
-   {
-      "id": 6,
-      "name": "margaritas",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-ceramica-llama.jpg"
-   },
-   {
-      "id": 7,
-      "name": "madera",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-mochila-celeste.jpg"
-   },
-   {
-      "id": 8,
-      "name": "calabaza",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-rosa.png"
-   },
-   {
-      "id": 9,
-      "name": "ceramica",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-rosa2.png"
-   },
-   {
-      "id": 10,
-      "name": "Set matero",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acero-verde.png"
-   },
-   {
-      "id": 11,
-      "name": "blanco",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acerogamusa.jpg"
-   },
-   {
-      "id": 12,
-      "name": "mate con flores",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "acerogamusa2.jpg"
-   },
-   {
-      "id": 13,
-      "name": "diseño gatitos",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "aceroycuero2.jpg"
-   },
-   {
-      "id": 14,
-      "name": "gris",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "aceroycuero.jpg"
-   },
-   {
-      "id": 15,
-      "name": "violeta",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "aluminio.jpg"
-   },
-   {
-      "id": 16,
-      "name": "cuero",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "ceramica3.jpg"
-   },
-   {
-      "id": 17,
-      "name": "'madera'",
-      "price": 2300,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "aluminio3.jpg"
-   },
-   {
-      "id": 18,
-      "name": "'cabalaza'",
-      "price": 2900,
-      "category": 2,
-      "description": "descripcion por defecto",
-      "image": "bala-aqua.jpg"
-   },
-   {
-      "id": 19,
-      "name": "'cuero y acero'",
-      "price": 3700,
-      "category": 3,
-      "description": "descripcion por defecto",
-      "image": "bala-negro.jpg"
-   },
-   {
-      "id": 20,
-      "name": "cuero",
-      "price": 3200,
-      "category": 3,
-      "description": "descripcion por defecto",
-      "image": "ceramica6.jpg"
-   },
-   {
-      "id": 21,
-      "name": "'ceramica",
-      "price": 2800,
-      "category": 3,
-      "description": "descripcion por defecto",
-      "image": "ceramica2.jpg"
-   },
-   {
-      "id": 22,
-      "name": "producto de prueba",
-      "price": 3500,
       "category": 1,
       "description": "",
       "brand": "prueba",
       "stock": "20",
-      "image": "image-1655075785243.jpg"
+      "image": "acero-aqua-botella.jpg"
+   },
+   {
+      "id": 2,
+      "name": "Set de acero cactus",
+      "price": 1000,
+      "category": 3,
+      "description": "sjdsahgdasd",
+      "brand": "prueba",
+      "stock": "50",
+      "image": "acero-cactus-set.jpg"
+     
+   },
+   {
+      "id": 3,
+      "name": "Set de cerámica llamas peruanas",
+      "price": 5300,
+      "category": 3,
+      "description": "descripcion por defecto",
+      "brand": "prueba",
+      "stock": "50",
+      "image": "acero-ceramica-llama-set.jpg"
+   },
+   {
+      "id": 4,
+      "name": "Set azul de acero y cuero",
+      "price": 9300,
+      "category": 3,
+      "description": "descripcion por defecto",
+       "brand": "prueba",
+      "stock": "50",
+      "image": "acero-cuero-azul.jpg"
+   },
+   {
+      "id": 5,
+      "name": "Set negro de cuero",
+      "price": 2300,
+      "category": 3,
+      "description": "descripcion por defecto",
+       "brand": "prueba",
+      "stock": "50",
+      "image": "acero-cuero-negro-set.jpg"
+   },
+   {
+      "id": 6,
+      "name": "Set de acero gatos (personalizable)",
+      "price": 2300,
+      "category": 3,
+      "description": "descripcion por defecto",
+       "brand": "prueba",
+      "stock": "50",
+      "image": "acero-gatos.jpg"
+   },
+   {
+      "id": 7,
+      "name": "Mate gris de acero y cuero",
+      "price": 2300,
+      "category": 1,
+      "description": "descripcion por defecto",
+       "brand": "prueba",
+      "stock": "50",
+      "image": "acero-gris.jpg"
+   },
+   {
+      "id": 8,
+      "name": "Set celeste con flores de acero y cuero",
+      "price": 4500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "50",
+      "image": "image-1656624228931.jpg"
+   },
+   {
+      "id": 9,
+      "name": "Set floreado naranja de acero",
+      "price": 8900,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "50",
+      "image": "image-1656624350510.png"
+   },
+   {
+      "id": 10,
+      "name": "Termo River Plate de acero",
+      "price": 5800,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "35",
+      "image": "image-1656624390485.jpg"
+   },
+   {
+      "id": 11,
+      "name": "Termo rojo de acero",
+      "price": 9500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "30",
+      "image": "image-1656624427087.webp"
+   },
+   {
+      "id": 12,
+      "name": "Mate rosa de acero",
+      "price": 6500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656624480160.jpg"
+   },
+   {
+      "id": 13,
+      "name": "Set de acero rosado",
+      "price": 9600,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656624508110.png"
+   },
+   {
+      "id": 14,
+      "name": "Set rosa y blanco de acero",
+      "price": 8800,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "30",
+      "image": "image-1656624542960.png"
+   },
+   {
+      "id": 15,
+      "name": "Set Simpson acero",
+      "price": 11500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656624581949.jpg"
+   },
+   {
+      "id": 16,
+      "name": "Set de flores verde acero",
+      "price": 6800,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656624653613.png"
+   },
+   {
+      "id": 17,
+      "name": "Mate imperial negro de acero con tapa",
+      "price": 12600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656624719114.jpg"
+   },
+   {
+      "id": 18,
+      "name": "Mate marrón de cuero",
+      "price": 5500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656624751878.jpg"
+   },
+   {
+      "id": 19,
+      "name": "Mate blanco de aluminio",
+      "price": 7800,
+      "category": 1,
+      "description": "",
+      "brand": "Guanaco",
+      "stock": "10",
+      "image": "image-1656624818007.jpg"
+   },
+   {
+      "id": 20,
+      "name": "Mate blanco puro de acero",
+      "price": 9500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656624850876.png"
+   },
+   {
+      "id": 21,
+      "name": "Mates acero blanco y negro set doble",
+      "price": 8500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656624894183.jpg"
+   },
+   {
+      "id": 22,
+      "name": "Botella deportiva aqua",
+      "price": 7500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656624947162.jpg"
    },
    {
       "id": 23,
-      "name": "producto de prueba2",
+      "name": "Termo negro de aluminio",
+      "price": 7700,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "30",
+      "image": "image-1656624978621.jpg"
+   },
+   {
+      "id": 24,
+      "name": "Termo violeta de aluminio",
+      "price": 6600,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656625032283.jpg"
+   },
+   {
+      "id": 25,
+      "name": "Botella de acero frío / caliente",
+      "price": 4900,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656625087181.jpg"
+   },
+   {
+      "id": 26,
+      "name": "Botella celeste de acero",
+      "price": 6500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "35",
+      "image": "image-1656625125237.jpg"
+   },
+   {
+      "id": 27,
+      "name": "Mate blanco de cerámica",
+      "price": 7500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656625160863.jpeg"
+   },
+   {
+      "id": 28,
+      "name": "Mate de cerámica y madera",
+      "price": 6500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656625192974.jpg"
+   },
+   {
+      "id": 29,
+      "name": "Mate de acrílico transparente",
+      "price": 5500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656625228238.jpg"
+   },
+   {
+      "id": 30,
+      "name": "Mate celeste de cerámica",
+      "price": 4500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "25",
+      "image": "image-1656625262810.jpg"
+   },
+   {
+      "id": 31,
+      "name": "Mate verde agua de cerámica",
       "price": 3600,
       "category": 1,
       "description": "",
       "brand": "prueba",
-      "stock": "50",
-      "image": "image-1655318825698.avif"
+      "stock": "20",
+      "image": "image-1656625313198.jpg"
    },
    {
-      "id": 24,
-      "name": "producto de prueba3",
-      "price": 2000,
-      "category": 3,
-      "description": "esta es una descripcion",
+      "id": 32,
+      "name": "Mate crema de acero",
+      "price": 9800,
+      "category": 1,
+      "description": "",
       "brand": "prueba",
-      "stock": "50",
-      "image": "image-1655655160528.jpg"
+      "stock": "15",
+      "image": "image-1656625350195.jpg"
+   },
+   {
+      "id": 33,
+      "name": "Mate celeste de cerámica",
+      "price": 5500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656625381214.jpg"
+   },
+   {
+      "id": 34,
+      "name": "Mate verde hexagonal de cerámica",
+      "price": 6800,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656625411759.jpg"
+   },
+   {
+      "id": 35,
+      "name": "Set multicolor de aluminio",
+      "price": 6800,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625467000.jpg"
+   },
+   {
+      "id": 36,
+      "name": "Set negro multicolor de aluminio",
+      "price": 7500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656625500046.jpg"
+   },
+   {
+      "id": 37,
+      "name": "Set crema multicolor de aluminio",
+      "price": 7500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656625535127.jpg"
+   },
+   {
+      "id": 38,
+      "name": "Mate de cuero marrón",
+      "price": 5600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625587195.webp"
+   },
+   {
+      "id": 39,
+      "name": "Mate de cuero negro",
+      "price": 5500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625713102.jpeg"
+   },
+   {
+      "id": 40,
+      "name": "Mate de cuero negro",
+      "price": 6500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625813407.jpg"
+   },
+   {
+      "id": 41,
+      "name": "Mate de cuero beige",
+      "price": 6500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625848414.jpg"
+   },
+   {
+      "id": 42,
+      "name": "Mate de cuero y madera",
+      "price": 3500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625877016.jpeg"
+   },
+   {
+      "id": 43,
+      "name": "Set de cuero marrón",
+      "price": 8900,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625919314.jpg"
+   },
+   {
+      "id": 44,
+      "name": "Set de cuero negro",
+      "price": 8800,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656625950108.png"
+   },
+   {
+      "id": 45,
+      "name": "Mate de calabaza y acero",
+      "price": 11500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626000015.jpg"
+   },
+   {
+      "id": 46,
+      "name": "Set de acero",
+      "price": 6500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626035121.jpg"
+   },
+   {
+      "id": 47,
+      "name": "Termo bala gatitos",
+      "price": 7800,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626067761.jpg"
+   },
+   {
+      "id": 48,
+      "name": "Mate de madera floreado",
+      "price": 3500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "5",
+      "image": "image-1656626135235.jpg"
+   },
+   {
+      "id": 49,
+      "name": "Set azucarero yerbero negro",
+      "price": 3600,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626166548.jpg"
+   },
+   {
+      "id": 50,
+      "name": "Set azucarero yerbero beige floreado",
+      "price": 5500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626213307.jpg"
+   },
+   {
+      "id": 51,
+      "name": "Set mate de madera, yerbero y azucarero",
+      "price": 6500,
+      "category": 3,
+      "description": "Ideal para regalar. Motivos a elección",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626282580.jpg"
+   },
+   {
+      "id": 52,
+      "name": "Mate de madera celeste y natural",
+      "price": 4600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626342866.jpg"
+   },
+   {
+      "id": 53,
+      "name": "Mate de madera floreado acuarela",
+      "price": 4600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626413535.jpg"
+   },
+   {
+      "id": 54,
+      "name": "Mate de calabaza",
+      "price": 8600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626454070.jpg"
+   },
+   {
+      "id": 55,
+      "name": "Set de mates de madera",
+      "price": 6000,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626526636.jpg"
+   },
+   {
+      "id": 56,
+      "name": "Mate y azucarera de madera floreada",
+      "price": 8600,
+      "category": 3,
+      "description": "",
+      "brand": "Donatella",
+      "stock": "20",
+      "image": "image-1656626565321.jpg"
+   },
+   {
+      "id": 57,
+      "name": "Set mates de madera pintados mandala",
+      "price": 7500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626602649.jpg"
+   },
+   {
+      "id": 58,
+      "name": "Mate de cuero y alpaca marrón",
+      "price": 8800,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626649471.jpg"
+   },
+   {
+      "id": 59,
+      "name": "Mate blanco de madera",
+      "price": 6600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626683009.jpg"
+   },
+   {
+      "id": 60,
+      "name": "Mate cactus de plástico",
+      "price": 6600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626722081.jpg"
+   },
+   {
+      "id": 61,
+      "name": "Mate negro de cerámica y alpaca",
+      "price": 5600,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626766643.jpg"
+   },
+   {
+      "id": 62,
+      "name": "Mate de madera y cuero marrón con flores",
+      "price": 6800,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626823656.jpg"
+   },
+   {
+      "id": 63,
+      "name": "Mate de madera y cuero con boca de acero",
+      "price": 8900,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626896445.jpg"
+   },
+   {
+      "id": 64,
+      "name": "Mate de madera y acero",
+      "price": 9500,
+      "category": 1,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656626942935.jpg"
+   },
+   {
+      "id": 65,
+      "name": "Set negro llamas",
+      "price": 7500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656626985641.jpg"
+   },
+   {
+      "id": 66,
+      "name": "Botella de acero pomelo",
+      "price": 6500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656627032683.jpg"
+   },
+   {
+      "id": 67,
+      "name": "Botella de acero rosa y verde",
+      "price": 6600,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656627068310.jpg"
+   },
+   {
+      "id": 68,
+      "name": "Set de mates stanley verde y negro",
+      "price": 10500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656627108293.jpg"
+   },
+   {
+      "id": 69,
+      "name": "Termo Stanley azul",
+      "price": 23500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "6",
+      "image": "image-1656627142093.jpg"
+   },
+   {
+      "id": 70,
+      "name": "Termo Stanley rojo",
+      "price": 23600,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656627181354.jpg"
+   },
+   {
+      "id": 71,
+      "name": "Termo Stanley verde",
+      "price": 23600,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656627212333.jpg"
+   },
+   {
+      "id": 72,
+      "name": "Termo bala de acero verde agua",
+      "price": 8800,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656627248603.jpg"
+   },
+   {
+      "id": 73,
+      "name": "Set 4 vasos Stanley acero",
+      "price": 12600,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656627282865.png"
+   },
+   {
+      "id": 74,
+      "name": "Botella de acero verde",
+      "price": 8400,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "15",
+      "image": "image-1656627316612.jpg"
+   },
+   {
+      "id": 75,
+      "name": "Set de cerámica para mamá",
+      "price": 6900,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656627534538.png"
+   },
+   {
+      "id": 76,
+      "name": "Set de madera rosado",
+      "price": 8200,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656627579082.png"
+   },
+   {
+      "id": 77,
+      "name": "Set Star Wars",
+      "price": 9500,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656627608700.jpg"
+   },
+   {
+      "id": 78,
+      "name": "Set de mate con azucarero y yerbero rosa",
+      "price": 9600,
+      "category": 3,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656627638116.png"
+   },
+   {
+      "id": 79,
+      "name": "Termo rojo",
+      "price": 8500,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656627774096.jpg"
+   },
+   {
+      "id": 80,
+      "name": "Termo de acero con hojas",
+      "price": 6900,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "20",
+      "image": "image-1656627889768.jpg"
+   },
+   {
+      "id": 81,
+      "name": "Termo de acero con flores",
+      "price": 9300,
+      "category": 2,
+      "description": "",
+      "brand": "prueba",
+      "stock": "10",
+      "image": "image-1656627918051.jpg"
+   },
+   {
+      "id": 82,
+      "name": "Termo rosa",
+      "price": 9650,
+      "category": 2,
+      "description": "",
+      "brand": "Peabory",
+      "stock": "10",
+      "image": "image-1656627944819.jpg"
    }
 ]

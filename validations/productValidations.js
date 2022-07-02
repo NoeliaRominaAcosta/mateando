@@ -3,7 +3,7 @@ const {body} = require('express-validator')
 module.exports = [
     body('name')
         .notEmpty().withMessage('El nombre del producto el obligatorio').bail()
-        .isLength({min:3,max:20}).withMessage('Mínimo 3 caracteres'),
+        ,
     
     body('price')
         .notEmpty()
