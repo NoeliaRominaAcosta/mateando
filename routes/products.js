@@ -15,7 +15,7 @@ router
     .put('/update/:id', upload.single('image'),productsValidations,update)
     .post('/add',upload.single('image'),productsValidations,store)
     .get('/detail/:idProduct', detail)
-    .get('/category/:idCategory/:id?', getByCategory)
+    .get('/category/:id/:id?', getByCategory)
     .delete('/remove/:id', remove)
 
 module.exports = router;

@@ -9,14 +9,14 @@
 
  
     <section id="product1" class="section-p1">
-        <h2><%= name %></h2>
-        <!-- nombre de la categoria -->
+      
         <div class="pro-container">
             <!-- ese array products esta dentro de la categoria -->
-            <% products.forEach(({id,name,price}) => { %>
+            <% products.forEach(({id,name,price,images}) => { %>
                  <div class="pro">
-                <div class="img">
-                </div>
+                    <div class="image-container">
+                        <a href="/products/detail/<%= id %> "><img src="/images/<%= images[0].file %> " alt=""></a>
+                    </div>
                 <div class="des">
                     <span>Marca del producto</span>
                     <h5><%= name %></h5>

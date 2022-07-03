@@ -14,13 +14,14 @@
 
 
     <section id="product1" class="section-p1">
+        <h2>Mates</h2>
       <div class="pro-container">
-          <% mates.forEach(({name, id, price,image}) => { %>
+          <% mates.forEach(({name, id, price,images}) => { %>
             <!-- esto corresponde al data/categories, ahi estan las categorias con un
             array de productos que tienen las propiedades del destructuring -->
            <div class="pro">
                 <div class="image-container">
-                    <a href="/products/detail/<%= id %> "><img src="/images/<%= image %> " alt=""></a>
+                    <a href="/products/detail/<%= id %> "><img src="/images/<%= images[0].file %> " alt=""></a>
                 </div>
                 <div class="des">
                     <span>La rosenda</span>
@@ -40,12 +41,13 @@
                 </div>
             </div>
           <% }) %>
-          <% termos.forEach(({name, id, price,image}) => { %>
+          <h2>Termos</h2>
+          <% termos.forEach(({name, id, price,images}) => { %>
              <!-- esto corresponde al data/categories, ahi estan las categorias con un
             array de productos que tienen las propiedades del destructuring -->
             <div class="pro">
                  <div class="image-container">
-                    <a href="/products/detail/<%= id %> "><img src="/images/<%= image %> " alt=""></a>
+                    <a href="/products/detail/<%= id %> "><img src="/images/<%= images[0].file %> " alt=""></a>
 
                  </div>
                  <div class="des">
@@ -66,12 +68,13 @@
                  </div>
              </div>
            <% }) %>
-           <% kits.forEach(({name, id, price, image}) => { %>
+           <h2>Sets</h2>
+           <% kits.forEach(({name, id, price, images}) => { %>
              <!-- esto corresponde al data/categories, ahi estan las categorias con un
             array de productos que tienen las propiedades del destructuring -->
             <div class="pro">
                  <div class="image-container">
-                    <a href="/products/detail/<%= id %> "><img src="/images/<%= image %> " alt=""></a>
+                    <a href="/products/detail/<%= id %> "><img src="/images/<%= images[0].file %> " alt=""></a>
 
                  </div>
                  <div class="des">
@@ -102,7 +105,7 @@
     <section id="pagination" class="section-p1">
         <a href="#">1</a>
         <a href="#">2</a>
-        <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
     </section>
     
    <section id="novedades" class="section-p1 section-m1">
