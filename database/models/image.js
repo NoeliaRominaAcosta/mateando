@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Image.init({
     file: DataTypes.STRING,
+    primary: DataTypes.BOOLEAN,
     productId: DataTypes.INTEGER
   }, {
     sequelize,

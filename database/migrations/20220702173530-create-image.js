@@ -10,7 +10,11 @@ module.exports = {
       },
       file: {
         type: Sequelize.STRING,
-        allowNull: false,
+      },
+      primary: {
+        type: Sequelize.BOOLEAN,
+        allowNull : false,
+        defaultValue : false
       },
       productId: {
         type: Sequelize.INTEGER,

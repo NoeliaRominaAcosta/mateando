@@ -5,15 +5,14 @@ const productsValidations = require('../validations/productValidations')
 const {products, detail, getByCategory, store, add, edit, update, remove} = require('../controllers/productsController')
 
 
-/* MULTER */
-/* GET /product page. */
+
 
 router
     .get('/', products)
     .get('/add', add)
     .get('/edit/:id', edit)
     .put('/update/:id', upload.single('image'),productsValidations,update)
-    .post('/add',upload.single('image'),productsValidations,store)
+    .post('/add',upload.array('images'),productsValidations,store)
     .get('/detail/:idProduct', detail)
     .get('/category/:id/:id?', getByCategory)
     .delete('/remove/:id', remove)

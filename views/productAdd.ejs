@@ -41,18 +41,19 @@
                 </div>
                 <div class="productAdmin__form-box">
                         <label for="category">Categorias</label>
-                        <select class="productAdmin__form-input" name="category" id="category" value="<%= locals.old && old.category ? old.category : null%>">
+                        <select class="productAdmin__form-input" name="categoryId" id="category">
                             <option value="" hidden selected>Selecciona la categoría...</option>
-                          <% categories.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.name %></option>
-                          <% }) %>
+                            <% categories.forEach(category => { %>
+                                <option value=<%= category.id %> <%= locals.old && old.categoryId == category.id ? 'selected' : null %> ><%= category.name%></option>
+                            
+                            <% }) %>
                         </select>
                          <span class="text-danger"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
                 </div>
                 
                 <div class="productAdmin__form-box">
                   <label for="image">Imagen</label>
-                  <input class="productAdmin__form-input" type="file" id="image" name="image" accept="image/*">
+                  <input class="productAdmin__form-input" type="file" id="images" name="images" accept="image/*">
                   
               </div>
               <div class="productAdmin__form-box">

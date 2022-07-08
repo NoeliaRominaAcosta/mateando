@@ -5,7 +5,7 @@
     }) %>
 
 <body class="detail">
-    <%- include('./partials/header') %>
+    <%- include('./partials/header',{user:user}) %>
 
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
@@ -28,8 +28,7 @@
         <div class="single-pro-details">
           <div class="detail-data">
              <h2><%= product.name %> </h2>
-             <!-- ese product.name viene del controlador que busca en
-            data products -->
+            
                   <h3><%= product.price %> </h3>
                   <p>$2800</p>
           </div>

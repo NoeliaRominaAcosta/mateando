@@ -9,7 +9,7 @@ module.exports = [
         .notEmpty()
         .withMessage('Debes indicar un precio').bail(),
     
-    body('category')
+    body('categoryId')
         .notEmpty()
         .withMessage('Se requiere una categoría').bail(),
     body('stock')
