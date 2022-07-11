@@ -9,19 +9,19 @@
 
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="/images/<%= product.image %>" width="100%" id="mainImg">
+            <img src="/images/<%= product.images[0].file %>" width="100%" id="mainImg">
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="/images/<%= product.image %>" width="100%" class="small-img">
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
                 </div>
                 <div class="small-img-col">
-                    <img src="/images/<%= product.image %>" width="100%" class="small-img">
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
                 </div>
                 <div class="small-img-col">
-                    <img src="/images/<%= product.image %>" width="100%" class="small-img">
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
                 </div>
                 <div class="small-img-col">
-                    <img src="/images/<%= product.image %>" width="100%" class="small-img">
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
                 </div>
             </div>
         </div>
@@ -30,22 +30,27 @@
              <h2><%= product.name %> </h2>
             
                   <h3><%= product.price %> </h3>
-                  <p>$2800</p>
+                  
           </div>
              
          
            
             <div class="selection">
-               
+                <% if (locals.userLogin?.rol==="admin") { %>
                <a href="/products/edit/<%= product.id %>"><button style="margin-top: 10px;" class="normal">Editar</button></a> 
-            
+           
                 <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST">
                     <button type="submit" style="margin-top: 10px;" class="normal">Eliminar</button>
                 </form>
+                <% } %> 
             </div>
             <div class="description">
                 <h4>Detalles</h4>
                 <b><p><%= product.description %></p></b>
+                <h4>Descuento</h4>
+                <b><p><%= product.discount %></p></b>
+                <h4>Vendidos</h4>
+                <b><p><%= product.sales %></p></b>
             </div>
             
         </div>
@@ -58,6 +63,7 @@
         <div class="pro-container">
             <div class="pro">
                 <div class="img14">
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
 
 
                 </div>
@@ -80,6 +86,7 @@
             </div>
             <div class="pro">
                 <div class="img7">
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
 
 
                 </div>
@@ -103,6 +110,7 @@
             <div class="pro">
                 <div class="img8">
 
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
 
                 </div>
                 <div class="des">
@@ -125,6 +133,7 @@
             <div class="pro">
                 <div class="img9">
 
+                    <img src="/images/<%= product.images[0].file %>" width="100%" class="small-img">
 
                 </div>
                 <div class="des">

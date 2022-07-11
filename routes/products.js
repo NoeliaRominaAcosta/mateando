@@ -13,7 +13,7 @@ router
     .get('/edit/:id', edit)
     .put('/update/:id', upload.single('image'),productsValidations,update)
     .post('/add',upload.array('images'),productsValidations,store)
-    .get('/detail/:idProduct', detail)
+    .get('/detail/:id', detail)
     .get('/category/:id/:id?', getByCategory)
     .delete('/remove/:id', remove)
 

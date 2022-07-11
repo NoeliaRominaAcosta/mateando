@@ -35,6 +35,12 @@ module.exports = {
       stock: {
         type: Sequelize.INTEGER
       },
+       discount: {
+        type: Sequelize.INTEGER
+      },
+      sales: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -1,3 +1,6 @@
+
+
+
 #page-header{
     background-image: url('/images/product_banner1.jpg');
     width: 100%;
@@ -56,10 +59,14 @@
     box-shadow: 15px 20px 20px 30px rgba(0, 0, 0, 0.02);
     margin: 15px 0;
     transition: 0.2s ease-in;
+    -webkit-box-shadow: 0 7px 6px -5px #777;
+    -moz-box-shadow: 2px 7px 6px -5px #777;
+         box-shadow: 0 7px 6px -5px #777;
 }
 
 #product1 .pro:hover {
-    box-shadow: 25px 25px 35px rgba(12, 90, 44, 0.152);
+    box-shadow: 25px 25px 35px rgba(20, 85, 47, 0.446);
+   
 }
 
 
@@ -109,6 +116,7 @@ width: 100%;
     position: absolute;
     bottom: 20px;
     right: 10px;
+
 }
 @media (max-width:920px) {
     #product1 .pro-container{

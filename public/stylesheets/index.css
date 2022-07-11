@@ -352,7 +352,21 @@ width: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
+#banner2 {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('/images/banner-matesdecuero.jpeg');
+    background-blend-mode: darken;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #banner h4 {
     color: rgb(0, 0, 0);
     font-size: 16px;
@@ -362,6 +376,7 @@ width: 100%;
 
 #banner h2 {
     color: #fff;
+  
     font-size: 30px;
     padding: 10px 0;
     text-shadow: 1px 2px 2px rgba(54, 54, 54, 0.443);
@@ -392,6 +407,8 @@ width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     padding: 30px;
+  
+   
 }
 #sm-banner .banner-box2{
     /*banner de ofertones 25% off */
@@ -423,16 +440,17 @@ color: #fff;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 80px;
-    margin: 20px 0;
+    margin: 30px 0;
+    padding: 10px 30px;
+    margin: 100px 0;
+    
 }
 #banner3 .banner-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*el texto a la izquierda*/
-    align-items: flex-start;
-    background-image: url('/images/banner2.jpg');
+    text-align: center;
+    background-image: url('/images/banner-mates-pastel2.jpg');
     background-blend-mode: darken;
     min-width: 30%;
     height: 30vh;
@@ -440,17 +458,28 @@ color: #fff;
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
-  
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    transition: .2s ease-in-out;
+    cursor: pointer;
 }
 #banner3 .banner-box2{
-    background-image: url('/images/banner2.jpg');
+    background-image: url('/images/banner-mates-pastel.jpg');
+
 
 }
+
 #banner3 .banner-box3{
-    background-image: url('/images/banner2.jpg');
+    background-image: url('/images/banner-mates-pastel3.jpg');
     
 }
+#banner3 .banner-box:hover{
+    opacity: .6;
+
+}
 #banner3 h2{
+    text-shadow: 2px 1px 1px rgb(105, 105, 105,.5);
     color: #fff;
     font-weight: 900;
     font-size: 22px;
@@ -460,7 +489,45 @@ color: #fff;
     font-weight: 800;
     font-size: 15px;
 }
+.discover   a {
+   
 
+    background:
+      linear-gradient(
+        to right,
+        rgb(255, 255, 255),
+        rgb(231, 245, 245)
+      ),
+      linear-gradient(
+        to right,
+        rgb(254, 141, 141),
+        rgb(247, 152, 219),
+        rgb(151, 196, 240),
+        rgb(169, 240, 151)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+  
+  .discover a:hover {
+    background-size: 0 5px, 100% 5px;
+  }
+  
+  /* Presentational Styles */
+  .discover {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    font-family: 'Satisfy', cursive;
+    font-size: 75px;
+    font-weight: 700;
+    height: 20vh;
+    place-items: center;
+    justify-content: center;
+    
+  }
 #novedades{
     display: flex;
     justify-content: space-between;
@@ -503,54 +570,61 @@ color: #fff;
 }
 
 footer{
-    background-color: #d7dcdfeb;
+    background-color: #edededeb;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  
+    justify-content: space-evenly;
+padding: 10px;
 }
 footer .col{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    height: 100px;
-}
-footer .logo{
-    margin-bottom: 30px;
+  
+   
+} 
 
-}
+
 .footer h4{
-    font-size: 14px;
+    font-size: 18px;
     padding-bottom: 20px;
 }
+
 .footer p{
-    font-size: 13px;
-    margin: 0 0 8px 0;
+    font-size: 16px;
+
 }
+
 .footer a{
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 .footer .follow{
     margin-top: 20px;
 }
-.footer .follow i{
-    color: gray;
+.footer .icon i{
+    color: rgb(82, 139, 35);
     padding-right: 4px;
     cursor: pointer;
+    font-size: 20px;
+  
 }
-.footer .follow i:hover,
+.footer .icon i:hover,
 .footer a:hover{
-    color: darkolivegreen;
+    color: rgb(228, 218, 104);
 }
 
 .footer .copyright{
     width: 100%;
-    text-align: center;
+    text-align: right;
 }
-
+.footer .copyright p {
+    color: rgb(82, 139, 35);
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
 @media (max-width:920px) {
     /*esto sera un nav bar a la derecha desplegado en vertical*/
     .section-p1{
@@ -687,4 +761,8 @@ footer .logo{
     #novedades .form{
         width: 100%;
     }
+    footer{
+flex-direction: column;
+    }
+   
 }

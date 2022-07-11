@@ -105,72 +105,94 @@ module.exports = {
       .catch((error) => console.log(error));
   },
   detail: (req, res) => {
-    db.Product.findByPk(req.params.id, {
-      include: ['images']
+   db.Product.findByPk(req.params.id, {
+    include: ["images"],
   })
-      .then(product => {
-          return res.render('detail', {
-              product,
-              user: req.session.userLogin
-          })
-      })
-      .catch(error => console.log(error))
+ 
+  .then((product) => {
+      return res.render('detail', {
+          product,
+          user: req.session.userLogin,
+      }) 
+
+  })
+  .catch((error) => console.log(error));
   },
   update: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      const { id } = req.params;
-      const { name, price, category, description, brand, stock } = req.body;
-
-      const productsUpdated = products.map((product) => {
-        if (product.id === +id) {
-          let productUpdated = {
-            ...product,
-            name: name.trim(),
-            price: +price,
-            category: +category,
-            description: description.trim(),
-            brand: brand.trim(),
-            stock: stock.trim(),
-            /* If there is a file, then the filename will be the image. If there is no file, then the
-            image will be the product.image. */
-            image: req.file ? req.file.filename : product.image,
-          };
-          if (req.file) {
-            if (
-              fs.existsSync(
-                path.resolve(__dirname, "..", "public", "images", product.image)
-              ) &&
-              product.image !== "default-image.png"
-            ) {
-              fs.unlinkSync(
-                path.resolve(__dirname, "..", "public", "images", product.image)
-              );
-            }
+      const { name, price, categoryId, description, brand, stock, image } =
+      req.body;
+      db.Product.update(
+        {
+          name: name.trim(),
+        price: +price,
+        categoryId,
+        description: description.trim(),
+        brand,
+        stock,
+        },
+        {
+          where : {
+            id : req.params.id
           }
-          return productUpdated;
         }
-        return product;
-      });
-
-      fs.writeFileSync(
-        path.resolve(__dirname, "..", "data", "products.json"),
-        JSON.stringify(productsUpdated, null, 3),
-        "utf-8"
-      );
-      return res.redirect("/products");
+      ).then(async () => {
+        if(req.file){
+          try {
+            await db.Image.update(
+              {
+                file : req.file.filename
+              },
+              {
+                where : {
+                  productId : req.params.id,
+                  primary : true
+                }
+              }
+            )
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        return res.redirect('/products');
+  
+      }).catch(error => console.log(error))
     } else {
       return res.render("productEdit", {
-        categories,
-        product: {
-          id: req.params.id,
-          ...req.body,
-        },
+       
         errors: errors.mapped(),
         user: req.session.userLogin,
       });
     }
   },
+  remove : (req, res) => {
+
+		db.Image.findAll({
+			where : {
+				productId : req.params.id
+			}
+		})
+			.then(images => {
+				images.forEach(image => {
+					if(fs.existsSync(path.resolve(__dirname,'../../public/images/' + image.file))){
+						console.log(image.file)
+						fs.unlinkSync(path.resolve(__dirname,'../../public/images/' + image.file))
+					}
+				});
+				db.Product.destroy({
+					where : {
+						id : req.params.id
+					},
+					force : true
+				})
+					.then((info) => {
+						console.log('>>>>>>>>>>>>>>>>>>>>>>>>',info);
+						return res.redirect('/products');
+					})
+			})
+			.catch(error => console.log(error))
+	},
   getByCategory: (req, res) => {
     const category = db.Category.findAll({
       where: {
@@ -192,16 +214,5 @@ module.exports = {
         });
       })
       .catch((error) => console.log(error));
-  },
-  remove: (req, res) => {
-    db.Product.destroy({
-			where : {
-				id : req.params.id
-			}
-		})
-			.then(() => {
-				return res.redirect('/products');
-			})
-			.catch(error => console.log(error))
-  },
+  }
 };
