@@ -4,8 +4,8 @@
     <div>
         <ul id="navbar">
          
-            <% if (locals.userLogin?.rol==="admin") { %>
-              <li><a href="/products/add">Añadir productos</a></li>
+            <% if (locals.userLogin?.rol===1) { %>
+              <li><a href="/users/admin">Admin</a></li>
 
           <% } %>
           <li><a href="/products">Catálogo</a></li>
@@ -19,7 +19,7 @@
              
             <li id="lg-bag"><a href="cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <a href="#"><i id="close" class="fa-solid fa-xmark"></i></a>
-
+            <li><a href="/users/logout"><i class="fa-solid fa-door-open"></i></a></li>
           <% } %>
 
 

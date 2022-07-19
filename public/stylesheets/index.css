@@ -1,3 +1,69 @@
+.home {
+    background: #3e3e3e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    position: relative;
+  }
+  
+  .carousel {
+    width: 100vw;
+    height: 60vh;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+    .carousel:hover .controls {
+      opacity: 1;
+    }
+    
+    .controls {
+      opacity: 0;
+      display: flex;
+      position: absolute;
+      top: 45%;
+      left: 0;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 99999;
+      transition: all ease 0.5s;
+    }
+    .controls .control {
+        margin: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.7);
+        opacity: .5;
+        transition: ease .3s;
+        cursor: pointer;
+    }
+    .controls .control:hover {
+          opacity: 1;
+        }
+    
+      .slides {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        width: 100%;
+        transition: 1s ease-in-out all;
+      }
+        .slide {
+          min-width: 100%;
+          height: 70vh;
+          height: auto;
+        }
+
+/* ********************************** */
+
 
 
 .section-p1 {
@@ -91,13 +157,13 @@ transition: 0.2s;
 
 /*section hero*/
 #hero {
-    background-image: url('/images/fondo.jpg');
-    height: 100vh;
+    background-image: url('../images/banner4.jpeg');
+    height: 75vh;
     opacity: 80%;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
-    padding: 0 80px;
+    padding: 5px  25px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -560,35 +626,27 @@ color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
     outline: none;
-
 }
 #novedades button{
     background-color: #04622d;
     color: #fff;
     white-space: nowrap;
- 
 }
-
 footer{
     background-color: #edededeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-padding: 10px;
+    padding: 10px;
 }
 footer .col{
     display: flex;
-    flex-direction: column;
-  
-   
+    flex-direction: column; 
 } 
-
-
 .footer h4{
     font-size: 18px;
     padding-bottom: 20px;
 }
-
 .footer p{
     font-size: 16px;
 
@@ -625,7 +683,13 @@ footer .col{
     font-size: 14px;
     font-weight: bold;
 }
+
+
+
 @media (max-width:920px) {
+    .home{
+        display: none;
+    }
     /*esto sera un nav bar a la derecha desplegado en vertical*/
     .section-p1{
         padding: 40px 40px;
@@ -718,6 +782,9 @@ footer .col{
     }
 } 
 @media (max-width: 460px) {
+    .home{
+        display: none;
+    }
     #header{
         padding: 10px 30px;
 
@@ -762,7 +829,7 @@ footer .col{
         width: 100%;
     }
     footer{
-flex-direction: column;
+    flex-direction: column;
     }
    
 }

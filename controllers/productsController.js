@@ -105,13 +105,20 @@ module.exports = {
       .catch((error) => console.log(error));
   },
   detail: (req, res) => {
-   db.Product.findByPk(req.params.id, {
+  let product = db.Product.findByPk(req.params.id, {
     include: ["images"],
   })
- 
-  .then((product) => {
+ let recommended = db.Product.findAll({
+  order: [["id", "ASC"]],
+  limit : 4,
+  include: ["images"]
+})
+
+Promise.all([product, recommended])
+.then(([product, recommended]) => {
       return res.render('detail', {
           product,
+          recommended,
           user: req.session.userLogin,
       }) 
 

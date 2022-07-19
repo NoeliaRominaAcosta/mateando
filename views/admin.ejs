@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head', { title : 'Admin' }) %>
+  <body class="admin">
+    <%- include('./partials/header') %>
+
+    <main>
+
+     
+     
+      <section class="container">
+
+        <a href="/products/add">
+          <button  class="buttonAdmin">Agregar producto</button>
+        </a>
+
+        <article class="row">
+          <% product.forEach(({id,name,price,images}) => { %>
+          <ul class="card-03">
+            <li>
+              <div>
+                <div class="imageContainer">
+                 <img src="/images/<%= images[0].file %> " alt="">
+                </div>
+                <h4><%= name %></h4>
+                <h4><%= price %></h4>
+              </div>
+
+              <div class="buttons">
+                <a href="/products/detail/<%= id %>"><button class="buttonAdmin" type="button"><i class="fa-solid fa-eye"></i>Ver</button></a>
+               <a href="/products/edit/<%= id %>"><button class="buttonAdmin" type="button"><i class="fa-regular fa-pen-to-square"></i>Editar</button></a>
+               <form action="/products/remove/<%= id %>?_method=DELETE" method="POST">
+                <button class="buttonAdmin" type="submit"><i class="fa-solid fa-trash"></i>Eliminar</button>
+              </form>
+              
+              </div>
+            </li>
+          </ul>
+          <% }) %>
+        </article>
+      </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

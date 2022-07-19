@@ -6,11 +6,33 @@
 
 <body class="products">
     <%- include('./partials/header', {user:user}) %> 
-
-    <section id="page-header">
-        <h2>Con vos siempre</h2>
-        <p>Con mercadopago tenés 2x1 en mates de madera</p>
-    </section>
+    <section class="home">
+        <div class="carousel">
+            <div class="slides">
+              <img
+                src="../images/bannerdescuento.jpeg"
+                alt="slide image"
+                class="slide"
+              />
+              <img
+                src="../images/bannercompartir.jpeg"
+                alt="slide image"
+                class="slide"
+              />
+              <img
+                src="../images/banner.jpg"
+                alt="slide image"
+                class="slide"
+              />
+            </div>
+            <div class="controls">
+              <div class="control prev-slide">&#9668;</div>
+              <div class="control next-slide">&#9658;</div>
+            </div>
+          </div>
+          
+      </section>
+  
 
 
     <section id="product1" class="section-p1">
@@ -99,7 +121,7 @@
     <section id="pagination" class="section-p1">
         <a href="#">1</a>
         <a href="#">2</a>
-        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#"><i class="fa-solid fa-angles-right"></i></a>
     </section>
     
    <section id="novedades" class="section-p1 section-m1">

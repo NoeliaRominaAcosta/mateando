@@ -1,0 +1,280 @@
+.admin{
+  background: linear-gradient(to top, #7db7f2 0%, #fdb3e8 50%, #e696a6 80%, #9d74db 100%);
+ 
+}
+.admin i{
+  color:var(--colorRosaOscuro);
+}
+
+.admin a{ 
+  text-decoration: none;
+}
+.admin main{
+  padding: 20px;
+}
+
+.admin .container{
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.admin .row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin .container button{
+  font-weight: 700;
+  border-radius: 6px;
+  color: var(--colorVerdeOscuro);
+ padding: 5px;
+ margin: 10px;
+ background-color: var(--colorVerdeClaro);
+ transition: .3s ease;
+}
+.admin .container button:hover{
+  background-color: var(--colorVerdeOscuro);
+  color: var(--colorVerdeClaro);
+  border-radius: 25px;
+   
+}
+.admin .card-03{
+  align-items: center;
+display: flex;
+height: 150px;
+  background: #ffffffb1;
+  position: relative;
+ 
+  margin: 3px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+}
+
+.admin .productContainer{
+  margin: 6px;
+  width: 200px;
+  margin-top: 36px;
+}
+.productDashboard {
+
+  height: 320px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 15px 15px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.productDashboard .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+
+}
+.productDashboard a {
+  text-decoration: none
+}
+
+.productDashboard .data a {
+  text-decoration: none;
+}
+
+.productDashboard img {
+  height: 200px;
+  width: 100%;
+  display: block;
+  padding: 1;
+  margin: 0 auto;
+  margin-top: 9px;
+  margin-bottom: 10px;
+
+}
+
+
+.admin .productDashboard h4 {
+  position: absolute;
+  color: var(--colorVerdeOscuro);
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.admin main h1{
+  text-align: center;
+  display: block;
+  margin: 11px 0 17px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+  line-height: 80px;
+  color: var(--colorCrema);
+
+  letter-spacing: -4px;
+}
+.admin main h2{
+  text-align: center;
+  display: block;
+  margin: 11px 0 17px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+  line-height: 80px;
+  color: var(--colorCrema);
+
+    letter-spacing: -4px;
+}
+.admin .productDashboard .imageContainer{
+margin-bottom: 5px;
+width: 100px;
+}
+.imageContainer img{
+  width: 100%;
+  height: 70px;
+  
+    
+}
+  .projects{
+    margin: 30px 5px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+  }
+ 
+  .infoAdmin{
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:30px 5px;
+
+  
+  }
+  .commitsData{
+    margin: 15px 0;
+    height: 320px;
+    width: 350px;
+    border-radius: 20px;
+    background-image: url('../images/data.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  
+
+
+
+  .illustrations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+ .admin .card-03 div{
+ padding: 5px;
+    display: flex;
+      align-items: center;
+  }
+ .admin .card-03 div h4{
+    color: var(--colorVerdeOscuro);
+   margin: 0 20px;
+ 
+  }
+ .admin .card-03 li{
+  
+    display: flex;
+    justify-content: space-between;
+  }
+ .admin .card-03 .buttons{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+  }
+ .admin .card-03 .buttons .buttonAdmin{
+    margin: 0 6px;
+    background-color: rgba(235, 235, 235, 0.687);
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+  }
+  .admin .card-03 .buttons .buttonAdmin:hover{
+   
+      background: rgba(136,0,68,.2);
+      border: none;
+      border-radius: 25px;
+   
+  }
+ .admin .card-03 .buttons .buttonAdmin i{
+    margin: 0 2px;
+    color: var(--colorVerdeOscuro);
+  
+  }
+ 
+@media(min-width:769px){
+ .admin .card-03{
+    position: relative;
+     flex: 100%;
+     width: 100%;
+     height: 80px;
+   }
+  
+ .admin  .card-03 h4{
+    font-size: 16px;
+     padding: 0 10px;
+   
+   }
+  .infoAdmin{
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: initial;
+    justify-content: space-around;
+    align-items: initial;
+    height: 550px;
+    
+  }
+ 
+.commitsData{
+  width: 50%;
+ height: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+}
+@media(min-width:1024px){
+ .admin .card-03{
+    height: 70px;
+  }
+ .admin .card-03 h4{
+    font-size: 18px;
+  }
+}

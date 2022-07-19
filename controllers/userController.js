@@ -1,67 +1,82 @@
- const path = require('path')
- const bcryptjs = require('bcryptjs')
- const fs = require('fs')
- const users = require('../data/users.json')
- const {validationResult} = require('express-validator')
- 
- module.exports = {
-    register : (req,res) => res.render('register'),
-    processRegister :(req,res) => {
-      let errors = validationResult(req)
-      if(errors.isEmpty()){
-       
-        let { name, email, password } = req.body
-      
-      let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
-      let newUser = {
-        id: +lastID + 1,
+const bcryptjs = require("bcryptjs");
+const { validationResult } = require("express-validator");
+const db = require('../database/models');
+
+module.exports = {
+  register: (req, res) => {
+    return res.render("register");
+  },
+  processRegister: (req, res) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      let { name, email, password } = req.body;
+
+      db.User.create({
         name: name.trim(),
-        email,
+        email: email.trim(),
         password: bcryptjs.hashSync(password, 10),
-        
-        rol: "user",
-      
-      };
-   
-      users.push(newUser)
-      fs.writeFileSync(
-        path.resolve(__dirname, "..", "data", "users.json"),
-        JSON.stringify(users, null, 3),
-        "utf-8"
-      );
-     
-      const { id, rol } = newUser
-      req.session.userLogin = {
-        id,
-        name: name.trim(),
-        rol
-      }
-      res.locals.userLogin = req.session.userLogin
-      return res.redirect("/");
-      }else{
-        return res.render('register', {
-          old : req.body,
-          errors : errors.mapped()
+        image: 'default-image.png',
+        rolId: 2,
+      })
+        .then((info) => {
+              return res.redirect("/users/login");
         })
+        .catch(error => console.log(error))
+  
+    } else {
+      return res.render("register", {
+        old: req.body,
+        errors: errors.mapped(),
+      });
+    }
+  },
+  login: (req, res) => {
+    return res.render("login");
+  },
+  processLogin: (req, res) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      
+      const {email} = req.body
+
+      db.User.findOne({
+        where : {
+          email
+        }
+      }).then( ({id,name, rolId}) => {
+        req.session.userLogin = {
+          id : +id,
+          name,
+          rol : +rolId
       }
-    },
-    login : (req,res) => res.render('login'),
-    processLogin : (req,res) => {
-      const errors = validationResult(req)
-      if(errors.isEmpty()){
-      const {id,name,avatar,rol} = users.find(user => user.email === req.body.email)
-      req.session.userLogin = {
-        id,
-        name,
-     
-        rol
-      }
-      return res.redirect('/')
-    }else {
+      res.redirect('/')
+      })
+      
+    } else {
       return res.render("login", {
         old: req.body,
         errors: errors.mapped(),
       });
     }
+  },
+  admin : (req,res) => {
+    db.Product.findAll(
+      { 
+          order : [['id','DESC']],
+           include : ['images']
+          }
+     )
+       .then(product => {
+           return res.render('admin', {
+              product
+           })
+       })
+       .catch(error => console.log(error)) 
+   
+  },
+  logout : (req,res) => {
+    req.session.destroy();
+    res.cookie('mateando',null,{maxAge : -1})
+    res.redirect('/')
   }
-} 
+};
