@@ -4,7 +4,9 @@ module.exports = {
     index : (req,res) => {
         return res.render('index')
     },
-    
+    contact : (req,res)=>{
+      return res.render('contact')
+    },
     explora : (req,res) => {
        
         let oferta = db.Product.findAll({

@@ -38,7 +38,7 @@
         height: 40px;
         width: 40px;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(158, 158, 158, 0.55);
         opacity: .5;
         transition: ease .3s;
         cursor: pointer;
@@ -68,8 +68,27 @@
 
 .section-p1 {
     padding: 40px 80px;
+ 
 }
 
+.section-p1 h3 {
+ 
+   width: 100%;
+margin: 30px 0;
+    font-family: 'Satisfy', cursive;
+    color: #202020;
+    letter-spacing: -2px;
+  }
+  
+ .section-p1 h3 span {
+    font-size: 95px;
+    margin: 20px 5px;
+    font-size: 80px;
+    line-height: 80px;
+    color: #f1ebe5;
+    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -1.5px 1px #fff;
+    letter-spacing: -4px;
+  }
 .section-m1 {
     margin: 40px 0;
 }
@@ -638,13 +657,16 @@ footer{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
+
 }
 footer .col{
+    margin: 20px 10px;
     display: flex;
     flex-direction: column; 
 } 
 .footer h4{
-    font-size: 18px;
+    font-size: 20px;
+    margin: 0 5px;
     padding-bottom: 20px;
 }
 .footer p{
@@ -653,13 +675,13 @@ footer .col{
 }
 
 .footer a{
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     margin-bottom: 10px;
     font-weight: bold;
 }
 .footer .follow{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .footer .icon i{
     color: rgb(82, 139, 35);

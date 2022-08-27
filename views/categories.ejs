@@ -6,19 +6,30 @@
 
 <body class="products">
     <%- include('./partials/header') %> 
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Ofertones</h4>
+            <h2>Tenés 2x1</h2>
+            <span>Los mejores mates de acero</span>
+            <a href="/products"><button class="white">Ver más</button></a>
+        </div>
+       
+   </section>
 
  
     <section id="product1" class="section-p1">
-      
+   
         <div class="pro-container">
+
             <!-- ese array products esta dentro de la categoria -->
-            <% products.forEach(({id,name,price,images}) => { %>
+            <% products.forEach(({id,name,price,images,brand}) => { %>
+           
                  <div class="pro">
                     <div class="image-container">
                         <a href="/products/detail/<%= id %> "><img src="/images/<%= images[0].file %> " alt=""></a>
                     </div>
                 <div class="des">
-                    <span>Marca del producto</span>
+                    <span><%= brand %></span>
                     <h5><%= name %></h5>
                     <!-- nombre del producto -->
                     <div class="star" >

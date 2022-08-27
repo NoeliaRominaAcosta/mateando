@@ -204,6 +204,7 @@ Promise.all([product, recommended])
     const category = db.Category.findAll({
       where: {
         id: req.params.id,
+        /* where click at header nav */
       },
     });
     const products = db.Product.findAll({

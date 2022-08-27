@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {index, explora} = require('../controllers/indexController')
+const {index, explora, contact} = require('../controllers/indexController')
 /* GET home page. */
 router
     .get('/', index)

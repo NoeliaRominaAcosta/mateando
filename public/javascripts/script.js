@@ -51,3 +51,4 @@ document.querySelector(".prev-slide").addEventListener("click", function() {
 
 
 /* finish carousels */
+
